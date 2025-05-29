@@ -3,43 +3,25 @@ package com.roland.repolovepotion.item;
 
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.InteractionResultHolder;
-
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Style;
-
 import java.util.List;
 import java.util.Random;
-import com.roland.repolovepotion.init.RepoLovePotionModSounds;
-
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.MutableComponent;
-
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import net.minecraft.core.Holder;
-import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.network.protocol.game.ClientboundSoundPacket;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.BuiltInRegistries;
-
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
