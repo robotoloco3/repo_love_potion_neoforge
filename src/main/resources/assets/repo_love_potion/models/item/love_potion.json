@@ -9,10 +9,10 @@
       "parent": "repo_love_potion:item/love_potion_2d"
     },
     "ground": {
-      "parent": "repo_love_potion:item/love_potion_3d"
+      "parent": "repo_love_potion:item/love_potion_2d"
     },
     "fixed": {
-      "parent": "repo_love_potion:item/love_potion_3d"
+      "parent": "repo_love_potion:item/love_potion_2d"
     }
   }
 }

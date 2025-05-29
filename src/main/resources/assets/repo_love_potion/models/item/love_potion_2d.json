@@ -1,6 +1,6 @@
 {
-  "model": {
-    "type": "minecraft:model",
-    "model": "repo_love_potion:item/lovepotion"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "repo_love_potion:item/lovepotion"
   }
 }
