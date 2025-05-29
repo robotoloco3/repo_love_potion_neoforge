@@ -1,0 +1,57 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT License"
+
+[[mods]]
+modId="repo_love_potion"
+version="1.0.0"
+displayName="REPO Love Potion"
+displayURL="https://mcreator.net"
+credits="Made for lizzy."
+authors="Roland"
+
+[[dependencies.repo_love_potion]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.92,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.repo_love_potion]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+[[dependencies.repo_love_potion]]
+    modId="apple_skin"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.repo_love_potion]]
+    modId="mixins"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.repo_love_potion]]
+    modId="create"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.repo_love_potion]]
+    modId="farmers_delight"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.repo_love_potion]]
+    modId="polymorph"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"

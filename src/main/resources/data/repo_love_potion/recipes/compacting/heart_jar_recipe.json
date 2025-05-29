@@ -1,0 +1,28 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:glass",
+      "count": 12
+    },
+    {
+      "item": "minecraft:iron_bars",
+      "count": 2
+    },
+    {
+      "item": "minecraft:air",
+      "count": 1
+    },
+    {
+      "item": "minecraft:oak_button",
+      "count": 1
+    }
+  ],
+  "results": [
+    {
+      "item": "repo_love_potion:heart_jar",
+      "count": 1,
+      "chance": 1
+    }
+  ]
+}

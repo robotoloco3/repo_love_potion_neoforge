@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "repo_love_potion:item/love_potion_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "repo_love_potion:item/love_potion_2d"
+    },
+    "ground": {
+      "parent": "repo_love_potion:item/love_potion_3d"
+    },
+    "fixed": {
+      "parent": "repo_love_potion:item/love_potion_3d"
+    }
+  }
+}
