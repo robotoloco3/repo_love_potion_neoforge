@@ -1,6 +1,8 @@
 
 package com.roland.repolovepotion.item;
 
+import com.roland.repolovepotion.init.RepoLovePotionModMobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
@@ -10,8 +12,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.LivingEntity;
-
-import com.roland.repolovepotion.procedures.GiveLoveProcedure;
 
 public class LoveCoreItem extends Item {
 	public LoveCoreItem() {
@@ -27,10 +27,8 @@ public class LoveCoreItem extends Item {
 	@Override
 	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
 		ItemStack retval = super.finishUsingItem(itemstack, world, entity);
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
-		GiveLoveProcedure.execute(entity);
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 600, 1, false, false));
 		return retval;
 	}
 }
