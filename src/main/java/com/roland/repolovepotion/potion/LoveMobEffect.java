@@ -1,5 +1,10 @@
 package com.roland.repolovepotion.potion;
 
+import net.minecraft.ChatFormatting;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.scores.PlayerTeam;
+import net.minecraft.world.scores.Scoreboard;
 import net.neoforged.neoforge.common.EffectCures;
 import net.neoforged.neoforge.common.EffectCure;
 
@@ -63,6 +68,25 @@ public class LoveMobEffect extends MobEffect {
             );
         }
 
+
+        if (!entity.hasEffect(MobEffects.GLOWING)) {
+            entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0, false, false));
+        }
+
+        if (entity instanceof ServerPlayer player) {
+            Scoreboard scoreboard = player.getScoreboard();
+            String teamName = "love_glow_pink";
+
+            PlayerTeam team = scoreboard.getPlayerTeam(teamName);
+            if (team == null) {
+                team = scoreboard.addPlayerTeam(teamName);
+                team.setColor(ChatFormatting.LIGHT_PURPLE);
+            }
+
+            scoreboard.addPlayerToTeam(player.getScoreboardName(), team);
+        }
+
         return super.applyEffectTick(entity, amplifier);
     }
+
 }

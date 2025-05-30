@@ -1,7 +1,4 @@
 
-/*
- *    MCreator note: This file will be REGENERATED on each build.
- */
 package com.roland.repolovepotion.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -25,6 +22,4 @@ public class RepoLovePotionModItems {
 	public static final DeferredItem<Item> UNPOLISHED_LOVE_CORE = REGISTRY.register("unpolished_love_core", UnpolishedLoveCoreItem::new);
 	public static final DeferredItem<Item> VILLAGER_RAP_DISK = REGISTRY.register("villager_rap_disk", VillagerRapDiskItem::new);
 	public static final DeferredItem<Item> I_LOVE_DISK = REGISTRY.register("i_love_disk", ILoveDiskItem::new);
-	// Start of user code block custom items
-	// End of user code block custom items
 }

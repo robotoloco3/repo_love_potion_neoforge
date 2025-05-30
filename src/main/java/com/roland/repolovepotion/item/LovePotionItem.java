@@ -1,6 +1,8 @@
 
 package com.roland.repolovepotion.item;
 
+import net.minecraft.world.effect.MobEffectInstance;
+import com.roland.repolovepotion.init.RepoLovePotionModMobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
@@ -910,7 +912,14 @@ public class LovePotionItem extends Item {
             			seed
 			        ));
 			    }
-		}			
+		}
+
+			MobEffectInstance loveEffect = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 600, 1, false, false);
+			serverPlayer.addEffect(loveEffect);
+			if (nearest != null) {
+				nearest.addEffect(loveEffect);
+			}
+
             String transitiveVerb = TRANSITIVE_VERBS[RANDOM.nextInt(TRANSITIVE_VERBS.length)];
             String intransitiveVerb = INTRANSITIVE_VERBS[RANDOM.nextInt(INTRANSITIVE_VERBS.length)];
             String adverb = ADVERBS[RANDOM.nextInt(ADVERBS.length)];

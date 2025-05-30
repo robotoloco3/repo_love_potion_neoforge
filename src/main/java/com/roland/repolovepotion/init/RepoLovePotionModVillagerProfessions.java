@@ -1,7 +1,4 @@
 
-/*
- *    MCreator note: This file will be REGENERATED on each build.
- */
 package com.roland.repolovepotion.init;
 
 import net.neoforged.neoforge.registries.RegisterEvent;
