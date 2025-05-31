@@ -170,21 +170,20 @@ public class LovePotionItem extends Item {
 		"explore with",
 		"go to Japan with",
 		"grow old with",
-		“Play Ark with”,
-		“Love with”,
-		“Gooning for”,
-		“Cuddle”
-		“Snuggle”,
-		“Gooning to”,
-		“Tickle my pickle with”,
-		“Tickle my pickle for”,
-		“Throw it back to”,
-		“Col lab or at ion with”,
+		"Play Ark with",
+		"Love with",
+		"Gooning for",
+		"Cuddle",
+		"Snuggle",
+		"Gooning to",
+		"Tickle my pickle with",
+		"Tickle my pickle for",
+		"Throw it back to",
+		"Col lab or at ion with",
 		"go awww lala for",
 		"go 'awwawawawawawawaaaaaa they so sweeetttt' to"
 	};
 
-	};
 	
 	private static final String[] INTRANSITIVE_VERBS = {
 	    "vibe",
@@ -326,11 +325,11 @@ public class LovePotionItem extends Item {
 		"imagine",
 		"melt",
 		"smirk",
-		"chuckle"
-		“Smash”,
-		“Bust”,
-		“Water bucket release”,
-		“Flint n steel”
+		"chuckle",
+		"Smash",
+		"Bust",
+		"Water bucket release",
+		"Flint n steel"
 
 	};
 	
@@ -412,8 +411,8 @@ public class LovePotionItem extends Item {
 		"genuinely",
 		"truly",
 		"sincerely",
-		“GYATTTTTTTTTTTTTTTT”,
-		“Boogy woogy”,
+		"GYATTTTTTTTTTTTTTTT",
+		"Boogy woogy",
 		"boogy woogity"
 	};
 	
@@ -555,9 +554,9 @@ public class LovePotionItem extends Item {
 		"wooooow",
 		"oh woooow",
 		"oh my gawd",
-		“Yiiipiiii yipiiiiii yiipiiiiiiii”,
-		“Bust”,
-		“Sooooo smash”
+		"Yiiipiiii yipiiiiii yiipiiiiiiii",
+		"Bust",
+		"Sooooo smash"
 	};
 	
 	private static final String[] INTENSIFIERS = {
@@ -638,8 +637,8 @@ public class LovePotionItem extends Item {
 		"genuinely",
 		"truly",
 		"sincerely",
-		“GYATTTTTTTTTTTTTTTT”,
-		“Boogy woogy”
+		"GYATTTTTTTTTTTTTTTT",
+		"Boogy woogy"
 
 	};
 	
@@ -752,17 +751,17 @@ public class LovePotionItem extends Item {
 		"princess",
 		"prince",
 		"superstar",
-		“Massive smashable gyattt”,
-		“Ark survival evolved”,
-		“Drake”,
-		“child”,
-		“ARK”,
-		“Smash”
-		“Lov”,
-		“Huggable lov”,
-		“Bald person”,
-		“Gru”,
-		“Giraffe”,
+		"Massive smashable gyattt",
+		"Ark survival evolved",
+		"Drake",
+		"child",
+		"ARK",
+		"Smash",
+		"Lov",
+		"Huggable lov",
+		"Bald person",
+		"Gru",
+		"Giraffe",
 		"MY LOVE",
 		"Nerd"
 	};
@@ -854,9 +853,9 @@ public class LovePotionItem extends Item {
 	    "Can't get enough of {playerName}'s {adjective} vibes.",
 	    "{playerName} is {adverb} {adjective}.",
 	    "Just {intransitiveVerb} about how {adjective} {playerName} is.",
-	    "{playerName} makes my day {intensifier} awesome."
-            “{playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName}”,
-            “{playerName} has a {adjective} {noun} ”
+	    "{playerName} makes my day {intensifier} awesome.",
+            "{playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName}",
+            "{playerName} has a {adjective} {noun} "
 
 	};
 
@@ -884,7 +883,8 @@ public class LovePotionItem extends Item {
 	}
 
 
-	@Override
+
+    @Override
 	public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
 
         if (!level.isClientSide && entity instanceof ServerPlayer serverPlayer) {
