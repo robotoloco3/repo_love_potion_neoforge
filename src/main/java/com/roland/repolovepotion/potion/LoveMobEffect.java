@@ -26,7 +26,9 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import com.roland.repolovepotion.init.RepoLovePotionModSounds;
 
+import net.tslat.effectslib.api.EffectOverlayRenderer;
 import net.tslat.effectslib.api.ExtendedMobEffect;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class LoveMobEffect extends ExtendedMobEffect {
@@ -41,12 +43,12 @@ public class LoveMobEffect extends ExtendedMobEffect {
     }
 
     @Override
-    public ParticleOptions createParticleOptions(MobEffectInstance effectInstance) {
+    public @NotNull ParticleOptions createParticleOptions(@NotNull MobEffectInstance effectInstance) {
         return ParticleTypes.HEART;
     }
 
     @Override
-    public void fillEffectCures(Set<EffectCure> cures, MobEffectInstance effectInstance) {
+    public void fillEffectCures(Set<EffectCure> cures, @NotNull MobEffectInstance effectInstance) {
         cures.add(EffectCures.MILK);
         cures.add(EffectCures.PROTECTED_BY_TOTEM);
         cures.add(EffectCures.HONEY);
@@ -75,7 +77,7 @@ public class LoveMobEffect extends ExtendedMobEffect {
     }
 
     @Override
-    public void onEffectStarted(LivingEntity entity, int amplifier) {
+    public void onEffectStarted(@NotNull LivingEntity entity, int amplifier) {
         if (!(entity instanceof ServerPlayer player)) return;
 
         ServerLevel level = player.serverLevel();
@@ -127,6 +129,10 @@ public class LoveMobEffect extends ExtendedMobEffect {
         }
 
         return true;
+    }
+
+    public EffectOverlayRenderer getOverlayRenderer() {
+        return null;
     }
 
 }
