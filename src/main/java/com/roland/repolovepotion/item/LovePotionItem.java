@@ -905,7 +905,7 @@ public class LovePotionItem extends Item {
 
 			if (!level.isClientSide) {
 	        	if (entity instanceof Player player) {
-            		player.getCooldowns().addCooldown(stack.getItem(), 150);
+            		player.getCooldowns().addCooldown(stack.getItem(), 200);
        			}
 			}
 
