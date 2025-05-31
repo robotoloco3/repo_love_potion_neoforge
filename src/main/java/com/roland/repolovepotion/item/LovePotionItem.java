@@ -169,7 +169,19 @@ public class LovePotionItem extends Item {
 		"go on adventures with",
 		"explore with",
 		"go to Japan with",
-		"grow old with"
+		"grow old with",
+		“Play Ark with”,
+		“Love with”,
+		“Gooning for”,
+		“Cuddle”
+		“Snuggle”,
+		“Gooning to”,
+		“Tickle my pickle with”,
+		“Tickle my pickle for”,
+		“Throw it back to”,
+		“Col lab or at ion with”
+	};
+
 	};
 	
 	private static final String[] INTRANSITIVE_VERBS = {
