@@ -25,15 +25,9 @@ authors="Roland"
     side="BOTH"
 
 [[dependencies.repo_love_potion]]
-    modId="apple_skin"
+    modId="appleskin"
     type="required"
     versionRange="[3.0.5,3.1.7)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.repo_love_potion]]
-    modId="mixins"
-    type="required"
-    versionRange="[0.8.7,0.9.2)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.repo_love_potion]]
@@ -43,7 +37,7 @@ authors="Roland"
     ordering="NONE"
     side="BOTH"
 [[dependencies.repo_love_potion]]
-    modId="farmers_delight"
+    modId="farmersdelight"
     type="required"
     versionRange="[1.2.7,1.4.9)"
     ordering="NONE"
@@ -51,6 +45,6 @@ authors="Roland"
 [[dependencies.repo_love_potion]]
     modId="polymorph"
     type="required"
-    versionRange="[1.0.10,1.2.3)"
+    versionRange="[1.0.8,1.2.3)"
     ordering="NONE"
     side="BOTH"

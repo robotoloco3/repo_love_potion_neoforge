@@ -1,10 +1,12 @@
 package com.roland.repolovepotion.potion;
 
 import net.minecraft.ChatFormatting;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.scores.Scoreboard;
+import net.minecraft.world.scores.Team;
 import net.neoforged.neoforge.common.EffectCures;
 import net.neoforged.neoforge.common.EffectCure;
 
@@ -13,7 +15,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.ParticleOptions;
@@ -25,7 +26,10 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import com.roland.repolovepotion.init.RepoLovePotionModSounds;
 
-public class LoveMobEffect extends MobEffect {
+import net.tslat.effectslib.api.ExtendedMobEffect;
+import org.jetbrains.annotations.Nullable;
+
+public class LoveMobEffect extends ExtendedMobEffect {
     public LoveMobEffect() {
         super(MobEffectCategory.BENEFICIAL, -65383);
         this.addAttributeModifier(Attributes.JUMP_STRENGTH,
@@ -49,12 +53,7 @@ public class LoveMobEffect extends MobEffect {
     }
 
     @Override
-    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-        return true;
-    }
-
-    @Override
-    public boolean applyEffectTick(LivingEntity entity, int amplifier) {
+    public boolean tick(LivingEntity entity, @Nullable MobEffectInstance effectInstance, int amplifier) {
         Level level = entity.level();
 
         if (!level.isClientSide && level.random.nextFloat() < 0.01f) {
@@ -68,25 +67,66 @@ public class LoveMobEffect extends MobEffect {
             );
         }
 
-
         if (!entity.hasEffect(MobEffects.GLOWING)) {
             entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0, false, false));
         }
 
-        if (entity instanceof ServerPlayer player) {
-            Scoreboard scoreboard = player.getScoreboard();
-            String teamName = "love_glow_pink";
+        return true;
+    }
 
-            PlayerTeam team = scoreboard.getPlayerTeam(teamName);
-            if (team == null) {
-                team = scoreboard.addPlayerTeam(teamName);
-                team.setColor(ChatFormatting.LIGHT_PURPLE);
-            }
+    @Override
+    public void onEffectStarted(LivingEntity entity, int amplifier) {
+        if (!(entity instanceof ServerPlayer player)) return;
 
-            scoreboard.addPlayerToTeam(player.getScoreboardName(), team);
+        ServerLevel level = player.serverLevel();
+        Scoreboard scoreboard = level.getScoreboard();
+
+        PlayerTeam team = scoreboard.getPlayerTeam("love_effect");
+        if (team == null) {
+            team = scoreboard.addPlayerTeam("love_effect");
+            team.setColor(ChatFormatting.LIGHT_PURPLE);
+            team.setSeeFriendlyInvisibles(true);
+            team.setNameTagVisibility(Team.Visibility.ALWAYS);
+            team.setCollisionRule(Team.CollisionRule.NEVER);
         }
 
-        return super.applyEffectTick(entity, amplifier);
+        scoreboard.addPlayerToTeam(player.getScoreboardName(), team);
+    }
+    @Override
+    public void onExpiry(MobEffectInstance effectInstance, LivingEntity entity) {
+        if (entity instanceof ServerPlayer player) {
+            ServerLevel level = player.serverLevel();
+            Scoreboard scoreboard = level.getScoreboard();
+
+            PlayerTeam team = scoreboard.getPlayerTeam("love_effect");
+            if (team != null) {
+                scoreboard.removePlayerFromTeam(player.getScoreboardName(), team);
+
+                if (team.getPlayers().isEmpty()) {
+                    scoreboard.removePlayerTeam(team);
+                }
+
+            }
+        }
+    }
+    @Override
+    public boolean onRemove(MobEffectInstance effectInstance, LivingEntity entity) {
+        if (entity instanceof ServerPlayer player) {
+            ServerLevel level = player.serverLevel();
+            Scoreboard scoreboard = level.getScoreboard();
+
+            PlayerTeam team = scoreboard.getPlayerTeam("love_effect");
+            if (team != null) {
+                scoreboard.removePlayerFromTeam(player.getScoreboardName(), team);
+
+                if (team.getPlayers().isEmpty()) {
+                    scoreboard.removePlayerTeam(team);
+                }
+
+            }
+        }
+
+        return true;
     }
 
 }

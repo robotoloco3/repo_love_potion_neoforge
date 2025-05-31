@@ -170,16 +170,6 @@ dependencies {
 
 
 dependencies {
-    implementation("org.spongepowered:mixin:0.8.7")
-}
-
-
-repositories {
-    maven {
-        url = 'https://cursemaven.com/'
-    }
-}
-dependencies {
     implementation 'curse.maven:farmers-delight-398521:6154807'
 }
 
@@ -191,4 +181,14 @@ repositories {
 }
 dependencies {
     implementation 'curse.maven:polymorph-388800:6373027'
+}
+
+
+repositories {
+    maven {
+        url = 'https://cursemaven.com/'
+    }
+}
+dependencies {
+    implementation 'curse.maven:tslateffectslib-700382:5882017'
 }

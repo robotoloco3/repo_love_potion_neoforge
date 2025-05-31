@@ -840,33 +840,6 @@ public class LovePotionItem extends Item {
 	}
 
 
-	//@Override
-	//public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-	//	InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-	//    world.playSound(
-	//    	null,
-	//        entity.blockPosition(),
-	//        RepoLovePotionModSounds.GLUG_GLUG.get(),
-	//        SoundSource.PLAYERS,
-	//        0.8F,
-	//        1.0F + world.random.nextFloat() * 0.2F 
-	//        );
-	//    return ar;
-	//}
-
-	//@Override
-	//public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
-	//	world.playSound(
-	//    	null,
-	//        entity.blockPosition(),
-	//        RepoLovePotionModSounds.GLUG_GLUG.get(),
-	//        SoundSource.PLAYERS,
-	//        0.0F,
-	//        0.0F
-	//        );
-	//}
-			
-
 	@Override
 	public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
 

@@ -31,6 +31,7 @@ import com.roland.repolovepotion.init.RepoLovePotionModSounds;
 import com.roland.repolovepotion.init.RepoLovePotionModMobEffects;
 import com.roland.repolovepotion.init.RepoLovePotionModItems;
 
+
 @Mod("repo_love_potion")
 public class RepoLovePotionMod {
 	public static final Logger LOGGER = LogManager.getLogger(RepoLovePotionMod.class);
@@ -54,7 +55,8 @@ public class RepoLovePotionMod {
 	private static boolean networkingRegistered = false;
 	private static final Map<CustomPacketPayload.Type<?>, NetworkMessage<?>> MESSAGES = new HashMap<>();
 
-	private record NetworkMessage<T extends CustomPacketPayload>(StreamCodec<? extends FriendlyByteBuf, T> reader, IPayloadHandler<T> handler) {
+	private record NetworkMessage<T extends CustomPacketPayload>(StreamCodec<? extends FriendlyByteBuf, T> reader,
+																 IPayloadHandler<T> handler) {
 	}
 
 	public static <T extends CustomPacketPayload> void addNetworkMessage(CustomPacketPayload.Type<T> id, StreamCodec<? extends FriendlyByteBuf, T> reader, IPayloadHandler<T> handler) {
@@ -89,3 +91,4 @@ public class RepoLovePotionMod {
 		workQueue.removeAll(actions);
 	}
 }
+
