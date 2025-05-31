@@ -179,7 +179,9 @@ public class LovePotionItem extends Item {
 		“Tickle my pickle with”,
 		“Tickle my pickle for”,
 		“Throw it back to”,
-		“Col lab or at ion with”
+		“Col lab or at ion with”,
+		"go awww lala for",
+		"go 'awwawawawawawawaaaaaa they so sweeetttt' to"
 	};
 
 	};
