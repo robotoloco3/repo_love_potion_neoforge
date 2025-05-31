@@ -327,6 +327,11 @@ public class LovePotionItem extends Item {
 		"melt",
 		"smirk",
 		"chuckle"
+		“Smash”,
+		“Bust”,
+		“Water bucket release”,
+		“Flint n steel”
+
 	};
 	
 	private static final String[] ADVERBS = {
@@ -406,7 +411,10 @@ public class LovePotionItem extends Item {
 		"suuuuper suuuuper",
 		"genuinely",
 		"truly",
-		"sincerely"
+		"sincerely",
+		“GYATTTTTTTTTTTTTTTT”,
+		“Boogy woogy”,
+		"boogy woogity"
 	};
 	
 	private static final String[] ADJECTIVES = {
@@ -546,7 +554,10 @@ public class LovePotionItem extends Item {
 		"yeah yeah wow wow",
 		"wooooow",
 		"oh woooow",
-		"oh my gawd"
+		"oh my gawd",
+		“Yiiipiiii yipiiiiii yiipiiiiiiii”,
+		“Bust”,
+		“Sooooo smash”
 	};
 	
 	private static final String[] INTENSIFIERS = {
@@ -626,7 +637,10 @@ public class LovePotionItem extends Item {
 		"suuuuper suuuuper",
 		"genuinely",
 		"truly",
-		"sincerely"
+		"sincerely",
+		“GYATTTTTTTTTTTTTTTT”,
+		“Boogy woogy”
+
 	};
 	
 	private static final String[] NOUNS = {
@@ -737,7 +751,19 @@ public class LovePotionItem extends Item {
 		"dream",
 		"princess",
 		"prince",
-		"superstar"
+		"superstar",
+		“Massive smashable gyattt”,
+		“Ark survival evolved”,
+		“Drake”,
+		“child”,
+		“ARK”,
+		“Smash”
+		“Lov”,
+		“Huggable lov”,
+		“Bald person”,
+		“Gru”,
+		“Giraffe”,
+		"MY LOVE"
 	};
 	
 	private static final String[] MESSAGES_WITH_PLAYER = {
@@ -828,6 +854,9 @@ public class LovePotionItem extends Item {
 	    "{playerName} is {adverb} {adjective}.",
 	    "Just {intransitiveVerb} about how {adjective} {playerName} is.",
 	    "{playerName} makes my day {intensifier} awesome."
+            “{playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName} {playerName}”,
+            “{playerName} has a {adjective} {noun} ”
+
 	};
 
 	public LovePotionItem() {
