@@ -763,7 +763,8 @@ public class LovePotionItem extends Item {
 		“Bald person”,
 		“Gru”,
 		“Giraffe”,
-		"MY LOVE"
+		"MY LOVE",
+		"Nerd"
 	};
 	
 	private static final String[] MESSAGES_WITH_PLAYER = {
