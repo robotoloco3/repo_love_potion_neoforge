@@ -172,16 +172,17 @@ public class LovePotionItem extends Item {
 		"grow old with",
 		"Play Ark with",
 		"Love with",
-		"Gooning for",
+		"Goon for",
 		"Cuddle",
 		"Snuggle",
-		"Gooning to",
+		"Goon to",
 		"Tickle my pickle with",
 		"Tickle my pickle for",
 		"Throw it back to",
-		"Col lab or at ion with",
+		"Collaborate with",
 		"go awww lala for",
-		"go 'awwawawawawawawaaaaaa they so sweeetttt' to"
+		"go 'awwawawawawawawaaaaaa they so sweeetttt' to",
+		"do 7:30 with"
 	};
 
 	
