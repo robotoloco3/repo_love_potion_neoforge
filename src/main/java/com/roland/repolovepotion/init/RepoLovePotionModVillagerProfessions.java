@@ -32,13 +32,13 @@ import com.google.common.collect.ImmutableSet;
 public class RepoLovePotionModVillagerProfessions {
 	private static final Map<String, ProfessionPoiType> POI_TYPES = new HashMap<>();
 	public static final DeferredRegister<VillagerProfession> PROFESSIONS = DeferredRegister.create(Registries.VILLAGER_PROFESSION, RepoLovePotionMod.MODID);
-	public static final DeferredHolder<VillagerProfession, VillagerProfession> TAX_MAN = registerProfession("tax_man", () -> Blocks.SOUL_LANTERN, () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("repo_love_potion:holy_moly")));
+	public static final DeferredHolder<VillagerProfession, VillagerProfession> TAX_MAN = registerProfession(() -> Blocks.SOUL_LANTERN, () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("repo_love_potion:holy_moly")));
 
-	private static DeferredHolder<VillagerProfession, VillagerProfession> registerProfession(String name, Supplier<Block> block, Supplier<SoundEvent> soundEvent) {
-		POI_TYPES.put(name, new ProfessionPoiType(block, null));
-		return PROFESSIONS.register(name, () -> {
-			Predicate<Holder<PoiType>> poiPredicate = poiTypeHolder -> (POI_TYPES.get(name).poiType != null) && (poiTypeHolder.value() == POI_TYPES.get(name).poiType.value());
-			return new VillagerProfession(RepoLovePotionMod.MODID + ":" + name, poiPredicate, poiPredicate, ImmutableSet.of(), ImmutableSet.of(), soundEvent.get());
+	private static DeferredHolder<VillagerProfession, VillagerProfession> registerProfession(Supplier<Block> block, Supplier<SoundEvent> soundEvent) {
+		POI_TYPES.put("tax_man", new ProfessionPoiType(block, null));
+		return PROFESSIONS.register("tax_man", () -> {
+			Predicate<Holder<PoiType>> poiPredicate = poiTypeHolder -> (POI_TYPES.get("tax_man").poiType != null) && (poiTypeHolder.value() == POI_TYPES.get("tax_man").poiType.value());
+			return new VillagerProfession(RepoLovePotionMod.MODID + ":" + "tax_man", poiPredicate, poiPredicate, ImmutableSet.of(), ImmutableSet.of(), soundEvent.get());
 		});
 	}
 
@@ -50,7 +50,7 @@ public class RepoLovePotionModVillagerProfessions {
 				String name = entry.getKey();
 				Optional<Holder<PoiType>> existingCheck = PoiTypes.forState(block.defaultBlockState());
 				if (existingCheck.isPresent()) {
-					RepoLovePotionMod.LOGGER.error("Skipping villager profession " + name + " that uses POI block " + block + " that is already in use by " + existingCheck);
+                    RepoLovePotionMod.LOGGER.error("Skipping villager profession {} that uses POI block {} that is already in use by {}", name, block, existingCheck);
 					continue;
 				}
 				PoiType poiType = new PoiType(ImmutableSet.copyOf(block.getStateDefinition().getPossibleStates()), 1, 1);

@@ -26,7 +26,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
+import org.jetbrains.annotations.NotNull;
 
 public class LovePotionItem extends Item {
 	private static final Random RANDOM = new Random();
@@ -873,19 +873,19 @@ public class LovePotionItem extends Item {
 	
 
 	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
+	public @NotNull UseAnim getUseAnimation(@NotNull ItemStack itemstack) {
 		return UseAnim.DRINK;
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
+	public int getUseDuration(@NotNull ItemStack itemstack, @NotNull LivingEntity livingEntity) {
 		return 40;
 	}
 
 
 
     @Override
-	public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
+	public @NotNull ItemStack finishUsingItem(@NotNull ItemStack stack, Level level, @NotNull LivingEntity entity) {
 
         if (!level.isClientSide && entity instanceof ServerPlayer serverPlayer) {
 	        List<ServerPlayer> players = serverPlayer.serverLevel().players().stream()
@@ -903,32 +903,33 @@ public class LovePotionItem extends Item {
 	            }
 	        }
 
-			if (!level.isClientSide) {
-	        	if (entity instanceof Player player) {
-            		player.getCooldowns().addCooldown(stack.getItem(), 200);
-       			}
-			}
+            serverPlayer.getCooldowns().addCooldown(stack.getItem(), 200);
 
 
-			SoundEvent soundEvent = BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("repo_love_potion:bluh_bluh"));
+            SoundEvent soundEvent = BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("repo_love_potion:bluh_bluh"));
 			long seed = serverPlayer.getRandom().nextLong();
 			double radius = 24.0;
     		Vec3 sourcePos = serverPlayer.position();
-    		Holder<SoundEvent> soundHolder = BuiltInRegistries.SOUND_EVENT.wrapAsHolder(soundEvent);
+            Holder<SoundEvent> soundHolder = null;
+            if (soundEvent != null) {
+                soundHolder = BuiltInRegistries.SOUND_EVENT.wrapAsHolder(soundEvent);
+            }
 
-			for (ServerPlayer other : serverPlayer.serverLevel().players()) {
+            for (ServerPlayer other : serverPlayer.serverLevel().players()) {
 			    if (other.position().distanceTo(sourcePos) <= radius) {
-			        other.connection.send(new ClientboundSoundPacket(
-			            soundHolder,
-            			SoundSource.PLAYERS,
-            			sourcePos.x,
-           				sourcePos.y,
-            			sourcePos.z,
-            			1.0f,
-            			1.0f,
-            			seed
-			        ));
-			    }
+                    if (soundHolder != null) {
+                        other.connection.send(new ClientboundSoundPacket(
+                            soundHolder,
+                            SoundSource.PLAYERS,
+                            sourcePos.x,
+                               sourcePos.y,
+                            sourcePos.z,
+                            1.0f,
+                            1.0f,
+                            seed
+                        ));
+                    }
+                }
 		}
 
 			MobEffectInstance loveEffect = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 600, 1, false, false);

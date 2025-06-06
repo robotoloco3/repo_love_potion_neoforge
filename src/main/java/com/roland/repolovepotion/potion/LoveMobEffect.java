@@ -130,7 +130,7 @@ public class LoveMobEffect extends ExtendedMobEffect {
 
         return true;
     }
-
+    @Override
     public EffectOverlayRenderer getOverlayRenderer() {
         return null;
     }

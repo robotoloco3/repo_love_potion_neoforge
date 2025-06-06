@@ -12,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.LivingEntity;
+import org.jetbrains.annotations.NotNull;
 
 public class LoveCoreItem extends Item {
 	public LoveCoreItem() {
@@ -20,12 +21,12 @@ public class LoveCoreItem extends Item {
 
 	@Override
 	@OnlyIn(Dist.CLIENT)
-	public boolean isFoil(ItemStack itemstack) {
+	public boolean isFoil(@NotNull ItemStack itemstack) {
 		return true;
 	}
 
 	@Override
-	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
+	public @NotNull ItemStack finishUsingItem(@NotNull ItemStack itemstack, @NotNull Level world, @NotNull LivingEntity entity) {
 		ItemStack retval = super.finishUsingItem(itemstack, world, entity);
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 600, 1, false, false));
