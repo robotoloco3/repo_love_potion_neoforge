@@ -51,14 +51,6 @@
       }
     ]
   },
-  "d_me": {
-    "sounds": [
-      {
-        "name": "repo_love_potion:villager_sings_despicable_me_-_minecraft_villager_cover.",
-        "stream": true
-      }
-    ]
-  },
   "diamonds": {
     "sounds": [
       {
@@ -115,26 +107,10 @@
       }
     ]
   },
-  "lemon": {
-    "sounds": [
-      {
-        "name": "repo_love_potion:villager_sings_lemon_tree_-_minecraft_villager_cover",
-        "stream": true
-      }
-    ]
-  },
   "levitating": {
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_levitating_-_minecraft_villager_cover.",
-        "stream": true
-      }
-    ]
-  },
-  "kiss_me": {
-    "sounds": [
-      {
-        "name": "repo_love_potion:villager_sings_like_the_way_you_kiss_me_-_minecraft_villager_cover.",
         "stream": true
       }
     ]
@@ -151,30 +127,6 @@
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_never_gonna_give_you_up_-_minecraft_villager_cover",
-        "stream": true
-      }
-    ]
-  },
-  "ransom": {
-    "sounds": [
-      {
-        "name": "repo_love_potion:villager_sings_ransom_-_minecraft_villager_cover",
-        "stream": true
-      }
-    ]
-  },
-  "rude": {
-    "sounds": [
-      {
-        "name": "repo_love_potion:villager_sings_rude_-_minecraft_villager_cover.",
-        "stream": true
-      }
-    ]
-  },
-  "stereo_heart": {
-    "sounds": [
-      {
-        "name": "repo_love_potion:villager_sings_stereo_heart_-_minecraft_villager_cover.",
         "stream": true
       }
     ]
@@ -207,14 +159,6 @@
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_viva_la_vida_-_minecraft_villager_cover.",
-        "stream": true
-      }
-    ]
-  },
-  "ymca": {
-    "sounds": [
-      {
-        "name": "repo_love_potion:villager_sings_ymca_-_minecraft_villager_cover.",
         "stream": true
       }
     ]
