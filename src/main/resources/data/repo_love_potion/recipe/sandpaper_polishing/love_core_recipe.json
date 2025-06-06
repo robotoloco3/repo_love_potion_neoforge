@@ -2,15 +2,12 @@
   "type": "create:sandpaper_polishing",
   "ingredients": [
     {
-      "item": "repo_love_potion:unpolished_love_core",
-      "count": 1
+      "item": "repo_love_potion:unpolished_love_core"
     }
   ],
   "results": [
     {
-      "item": "repo_love_potion:love_core",
-      "count": 1,
-      "chance": 0.15
+      "id": "repo_love_potion:love_core"
     }
   ]
 }

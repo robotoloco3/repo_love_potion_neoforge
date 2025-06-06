@@ -10,19 +10,12 @@
       "count": 2
     },
     {
-      "item": "minecraft:air",
-      "count": 1
-    },
-    {
-      "item": "minecraft:oak_button",
-      "count": 1
+      "item": "minecraft:oak_button"
     }
   ],
   "results": [
     {
-      "item": "repo_love_potion:heart_jar",
-      "count": 1,
-      "chance": 1
+      "id": "repo_love_potion:heart_jar"
     }
   ]
 }

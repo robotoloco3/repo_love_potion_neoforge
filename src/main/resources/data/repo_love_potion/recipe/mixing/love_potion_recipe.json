@@ -2,20 +2,16 @@
   "type": "create:mixing",
   "ingredients": [
     {
-      "item": "repo_love_potion:love_core",
-      "count": 1
+      "item": "repo_love_potion:love_core"
     },
     {
-      "item": "repo_love_potion:heart_jar",
-      "count": 1
+      "item": "repo_love_potion:heart_jar"
     }
   ],
   "heatRequirement": "superheated",
   "results": [
     {
-      "item": "repo_love_potion:love_potion",
-      "count": 1,
-      "chance": 1
+      "id": "repo_love_potion:love_potion"
     }
   ]
 }
