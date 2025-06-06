@@ -855,9 +855,9 @@ public class LovePotionItem extends Item {
 	    "{playerName} is {adverb} {adjective}.",
 	    "Just {intransitiveVerb} about how {adjective} {playerName} is.",
 	    "{playerName} makes my day {intensifier} awesome.",
-            "{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!{playerName}!",
-            "{playerName} has a {adjective} {noun} ",
-	    "{playerName} makes me want to bust"
+		"{playerName}! {playerName}!{playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}!",
+		"{playerName} has a {adjective} {noun} ",
+	    "{playerName} makes me want to bust."
 		
 	};
 
