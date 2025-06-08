@@ -8,10 +8,10 @@
       "item": "repo_love_potion:heart_jar"
     }
   ],
-  "heatRequirement": "superheated",
   "results": [
     {
       "id": "repo_love_potion:love_potion"
     }
-  ]
+  ],
+  "heatRequirement": "superheated"
 }

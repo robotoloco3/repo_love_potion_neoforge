@@ -1,5 +1,6 @@
 package com.roland.repolovepotion;
 
+import com.roland.repolovepotion.events.PlayerDeathHandler;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -50,6 +51,8 @@ public class RepoLovePotionMod {
 
 		RepoLovePotionModVillagerProfessions.PROFESSIONS.register(modEventBus);
 
+		NeoForge.EVENT_BUS.register(PlayerDeathHandler.class);
+
 	}
 
 	private static boolean networkingRegistered = false;
@@ -90,5 +93,7 @@ public class RepoLovePotionMod {
 		actions.forEach(e -> e.getA().run());
 		workQueue.removeAll(actions);
 	}
+
+
 }
 
