@@ -28,7 +28,6 @@ import com.roland.repolovepotion.init.RepoLovePotionModSounds;
 
 import net.tslat.effectslib.api.EffectOverlayRenderer;
 import net.tslat.effectslib.api.ExtendedMobEffect;
-import net.tslat.effectslib.api.ExtendedMobEffectHolder;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
