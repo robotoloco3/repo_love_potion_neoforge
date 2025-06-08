@@ -56,16 +56,15 @@ public class LoveMobEffect extends ExtendedMobEffect {
     }
 
     @Override
-    public boolean shouldTickEffect(LivingEntity entity, int amplifier) {
-        return true;
+    public boolean shouldTickEffect(@Nullable MobEffectInstance effectInstance, @Nullable LivingEntity entity, int ticksRemaining, int amplifier) {
+        return ticksRemaining % 4 == 0;
     }
     @Override
     public boolean tick(LivingEntity entity, @Nullable MobEffectInstance effectInstance, int amplifier) {
-        System.err.println("[ERROR] This is a manual error message!");
 
         Level level = entity.level();
 
-        if (!level.isClientSide && level.random.nextFloat() < 0.01f) {
+        if (!level.isClientSide && level.random.nextFloat() < 0.05f) {
             level.playSound(
                 null,
                 entity.blockPosition(),
@@ -74,10 +73,6 @@ public class LoveMobEffect extends ExtendedMobEffect {
                 1.0F,
                 1.0F + level.random.nextFloat() * 0.4F
             );
-        }
-
-        if (!entity.hasEffect(MobEffects.GLOWING)) {
-            entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0, false, false));
         }
 
         return true;
@@ -99,7 +94,9 @@ public class LoveMobEffect extends ExtendedMobEffect {
             team.setNameTagVisibility(Team.Visibility.ALWAYS);
             team.setCollisionRule(Team.CollisionRule.NEVER);
         }
-
+        if (!entity.hasEffect(MobEffects.GLOWING)) {
+            entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 9999, 0, false, false, false));
+        }
         scoreboard.addPlayerToTeam(player.getScoreboardName(), team);
     }
     @Override
@@ -117,6 +114,9 @@ public class LoveMobEffect extends ExtendedMobEffect {
                 }
 
             }
+            if (entity.hasEffect(MobEffects.GLOWING)) {
+                entity.removeEffect(MobEffects.GLOWING);
+            }
         }
     }
     @Override
@@ -133,6 +133,10 @@ public class LoveMobEffect extends ExtendedMobEffect {
                     scoreboard.removePlayerTeam(team);
                 }
 
+            }
+
+            if (entity.hasEffect(MobEffects.GLOWING)) {
+                entity.removeEffect(MobEffects.GLOWING);
             }
         }
 

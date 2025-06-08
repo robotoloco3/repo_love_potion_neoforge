@@ -934,7 +934,7 @@ public class LovePotionItem extends Item {
                 }
 		}
 
-			MobEffectInstance loveEffect = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 600, 1, false, false);
+			MobEffectInstance loveEffect = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 900, 0, false, false, true);
 			serverPlayer.addEffect(loveEffect);
 			if (nearest != null) {
 				nearest.addEffect(loveEffect);
