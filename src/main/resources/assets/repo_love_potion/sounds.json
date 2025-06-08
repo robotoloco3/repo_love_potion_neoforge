@@ -35,14 +35,6 @@
       }
     ]
   },
-  "stars": {
-    "sounds": [
-      {
-        "name": "repo_love_potion:villager_sings_counting_stars_-_minecraft_villager_cover.",
-        "stream": true
-      }
-    ]
-  },
   "demons": {
     "sounds": [
       {

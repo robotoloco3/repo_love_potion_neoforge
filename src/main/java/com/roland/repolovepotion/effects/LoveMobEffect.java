@@ -1,4 +1,4 @@
-package com.roland.repolovepotion.potion;
+package com.roland.repolovepotion.effects;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.server.level.ServerLevel;
@@ -28,12 +28,13 @@ import com.roland.repolovepotion.init.RepoLovePotionModSounds;
 
 import net.tslat.effectslib.api.EffectOverlayRenderer;
 import net.tslat.effectslib.api.ExtendedMobEffect;
+import net.tslat.effectslib.api.ExtendedMobEffectHolder;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class LoveMobEffect extends ExtendedMobEffect {
     public LoveMobEffect() {
-        super(MobEffectCategory.BENEFICIAL, -65383);
+        super(MobEffectCategory.BENEFICIAL, 0xffff0099);
         this.addAttributeModifier(Attributes.JUMP_STRENGTH,
             ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "effect.love_0"),
             0.2, AttributeModifier.Operation.ADD_VALUE);
@@ -55,7 +56,13 @@ public class LoveMobEffect extends ExtendedMobEffect {
     }
 
     @Override
+    public boolean shouldTickEffect(LivingEntity entity, int amplifier) {
+        return true;
+    }
+    @Override
     public boolean tick(LivingEntity entity, @Nullable MobEffectInstance effectInstance, int amplifier) {
+        System.err.println("[ERROR] This is a manual error message!");
+
         Level level = entity.level();
 
         if (!level.isClientSide && level.random.nextFloat() < 0.01f) {
@@ -65,7 +72,7 @@ public class LoveMobEffect extends ExtendedMobEffect {
                 RepoLovePotionModSounds.YIPEE.get(),
                 SoundSource.PLAYERS,
                 1.0F,
-                1.0F + level.random.nextFloat() * 0.2F
+                1.0F + level.random.nextFloat() * 0.4F
             );
         }
 
@@ -78,6 +85,7 @@ public class LoveMobEffect extends ExtendedMobEffect {
 
     @Override
     public void onEffectStarted(@NotNull LivingEntity entity, int amplifier) {
+        System.err.println("[ERROR] This is a manual error message!");
         if (!(entity instanceof ServerPlayer player)) return;
 
         ServerLevel level = player.serverLevel();
