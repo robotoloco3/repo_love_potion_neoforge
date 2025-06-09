@@ -27,9 +27,9 @@ public class LoveCoreItem extends Item {
 
 	@Override
 	public @NotNull ItemStack finishUsingItem(@NotNull ItemStack itemstack, @NotNull Level world, @NotNull LivingEntity entity) {
-		ItemStack retval = super.finishUsingItem(itemstack, world, entity);
-		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 600, 1, false, false));
-		return retval;
+		ItemStack retrieval = super.finishUsingItem(itemstack, world, entity);
+		if (!entity.level().isClientSide())
+			entity.addEffect(new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 3600, 0, false, true, true));
+		return retrieval;
 	}
 }
