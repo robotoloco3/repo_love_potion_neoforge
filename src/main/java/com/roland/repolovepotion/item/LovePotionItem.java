@@ -951,6 +951,8 @@ public class LovePotionItem extends Item {
 		}
 
 			MobEffectInstance loveEffect = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 900, 0, false, false, true);
+
+			serverPlayer.removeEffect(RepoLovePotionModMobEffects.LOVE);
 			serverPlayer.addEffect(loveEffect);
 			if (nearest != null) {
 				nearest.removeEffect(RepoLovePotionModMobEffects.LOVE);
@@ -986,35 +988,53 @@ public class LovePotionItem extends Item {
         return stack;
     }
 
-	
-     public void sendFormattedMessage(ServerPlayer player, String template, Map<String, Component> placeholders, ChatFormatting defaultColor) {
-        Pattern pattern = Pattern.compile("\\{(\\w+)}");
-        Matcher matcher = pattern.matcher(template);
+	private String pluralizeVerb(String verb) {
+		if (verb.endsWith("e")) {
+			return verb + "s";
+		} else {
+			return verb + "es";
+		}
+	}
+	public void sendFormattedMessage(ServerPlayer player, String template, Map<String, Component> placeholders, ChatFormatting defaultColor) {
+		Pattern pattern = Pattern.compile("\\{(\\w+?)(s)?}");
+		Matcher matcher = pattern.matcher(template);
 
-        int lastEnd = 0;
-        MutableComponent message = Component.empty();
+		int lastEnd = 0;
+		MutableComponent message = Component.empty();
 
-        while (matcher.find()) {
-            String before = template.substring(lastEnd, matcher.start());
-            String key = matcher.group(1);
+		while (matcher.find()) {
+			String before = template.substring(lastEnd, matcher.start());
+			String key = matcher.group(1);
+			boolean isPlural = matcher.group(2) != null;
 
-            if (!before.isEmpty()) {
-                message = message.append(Component.literal(before).withStyle(defaultColor));
-            }
+			if (!before.isEmpty()) {
+				message.append(Component.literal(before).withStyle(defaultColor));
+			}
 
-            Component replacement = placeholders.getOrDefault(key, Component.literal("{" + key + "}").withStyle(ChatFormatting.RED));
-            message = message.append(replacement);
+			Component base = placeholders.get(key);
 
-            lastEnd = matcher.end();
-        }
+			if (base != null) {
+				String plain = base.getString();
+				if (isPlural) {
+					String plural = pluralizeVerb(plain);
+					message.append(Component.literal(plural).withStyle(base.getStyle()));
+				} else {
+					message.append(base);
+				}
+			} else {
+				message.append(Component.literal("{" + key + (isPlural ? "s" : "") + "}").withStyle(ChatFormatting.RED));
+			}
 
-        if (lastEnd < template.length()) {
-            String after = template.substring(lastEnd);
-            message = message.append(Component.literal(after).withStyle(defaultColor));
-        }
+			lastEnd = matcher.end();
+		}
 
-        for (ServerPlayer onlinePlayer : player.serverLevel().players()) {
-        onlinePlayer.sendSystemMessage(message);
-    }
-    }
+		if (lastEnd < template.length()) {
+			String after = template.substring(lastEnd);
+			message.append(Component.literal(after).withStyle(defaultColor));
+		}
+
+		for (ServerPlayer onlinePlayer : player.serverLevel().players()) {
+			onlinePlayer.sendSystemMessage(message);
+		}
+	}
 }

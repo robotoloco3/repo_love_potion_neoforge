@@ -1,5 +1,6 @@
 package com.roland.repolovepotion.effects;
 
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -26,7 +27,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import com.roland.repolovepotion.init.RepoLovePotionModSounds;
 
-import net.tslat.effectslib.api.EffectOverlayRenderer;
+//import net.tslat.effectslib.api.EffectOverlayRenderer;
 import net.tslat.effectslib.api.ExtendedMobEffect;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -79,7 +80,6 @@ public class LoveMobEffect extends ExtendedMobEffect {
 
     @Override
     public void onEffectStarted(@NotNull LivingEntity entity, int amplifier) {
-        System.err.println("[ERROR] This is a manual error message!");
         if (!(entity instanceof ServerPlayer player)) return;
 
         ServerLevel level = player.serverLevel();
@@ -141,9 +141,9 @@ public class LoveMobEffect extends ExtendedMobEffect {
 
         return true;
     }
-    @Override
-    public EffectOverlayRenderer getOverlayRenderer() {
-        return null;
-    }
+    //@Override
+    //public EffectOverlayRenderer getOverlayRenderer() {
+    //  return new LoveEffectOverlayRenderer();
+    //}
 
 }
