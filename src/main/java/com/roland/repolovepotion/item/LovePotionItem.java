@@ -3,6 +3,7 @@ package com.roland.repolovepotion.item;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import com.roland.repolovepotion.init.RepoLovePotionModMobEffects;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
@@ -905,7 +906,7 @@ public class LovePotionItem extends Item {
 	            }
 	        }
 
-            serverPlayer.getCooldowns().addCooldown(stack.getItem(), 200);
+            serverPlayer.getCooldowns().addCooldown(stack.getItem(), 260);
 
 
             SoundEvent soundEvent = BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("repo_love_potion:bluh_bluh"));
@@ -937,6 +938,7 @@ public class LovePotionItem extends Item {
 			MobEffectInstance loveEffect = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 900, 0, false, false, true);
 			serverPlayer.addEffect(loveEffect);
 			if (nearest != null) {
+				nearest.removeEffect(RepoLovePotionModMobEffects.LOVE);
 				nearest.addEffect(loveEffect);
 			}
 

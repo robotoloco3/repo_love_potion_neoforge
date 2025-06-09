@@ -1,6 +1,7 @@
 package com.roland.repolovepotion;
 
 import com.roland.repolovepotion.events.PlayerDeathHandler;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -53,7 +54,10 @@ public class RepoLovePotionMod {
 
 		NeoForge.EVENT_BUS.register(PlayerDeathHandler.class);
 
+
 	}
+
+
 
 	private static boolean networkingRegistered = false;
 	private static final Map<CustomPacketPayload.Type<?>, NetworkMessage<?>> MESSAGES = new HashMap<>();

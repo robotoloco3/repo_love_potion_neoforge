@@ -56,14 +56,14 @@ public class LoveMobEffect extends ExtendedMobEffect {
 
     @Override
     public boolean shouldTickEffect(@Nullable MobEffectInstance effectInstance, @Nullable LivingEntity entity, int ticksRemaining, int amplifier) {
-        return ticksRemaining % 4 == 0;
+        return ticksRemaining % 40 == 0;
     }
     @Override
     public boolean tick(LivingEntity entity, @Nullable MobEffectInstance effectInstance, int amplifier) {
 
         Level level = entity.level();
 
-        if (!level.isClientSide && level.random.nextFloat() < 0.05f) {
+        if (!level.isClientSide && level.random.nextFloat() < 0.1f) {
             level.playSound(
                 null,
                 entity.blockPosition(),
