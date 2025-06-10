@@ -32,6 +32,7 @@ public class LovePotionItem extends Item {
 	private static final Random RANDOM = new Random();
 	private static final double MAX_DISTANCE = 24.0;
 	private static final int USE_DURATION = 40;
+	private static final int EFFECT_DURATION = 900;
 	private static final int COOLDOWN = 260;
 	private static final String DEFAULT_PLAYER_NAME = "this potion";
 	
@@ -1168,7 +1169,7 @@ public class LovePotionItem extends Item {
                 }
 			}
 
-			MobEffectInstance loveEffect = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 900, 0, false, true, true);
+			MobEffectInstance loveEffect = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, EFFECT_DURATION, 0, false, true, true);
 
 			serverPlayer.removeEffect(RepoLovePotionModMobEffects.LOVE);
 			serverPlayer.addEffect(loveEffect);
