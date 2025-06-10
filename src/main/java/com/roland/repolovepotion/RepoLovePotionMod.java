@@ -1,7 +1,6 @@
 package com.roland.repolovepotion;
 
 import com.roland.repolovepotion.events.PlayerDeathHandler;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 

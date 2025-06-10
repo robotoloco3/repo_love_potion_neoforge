@@ -31,6 +31,8 @@ import org.jetbrains.annotations.NotNull;
 public class LovePotionItem extends Item {
 	private static final Random RANDOM = new Random();
 	private static final double MAX_DISTANCE = 24.0;
+	private static final int USE_DURATION = 40;
+	private static final int COOLDOWN = 260;
 	private static final String DEFAULT_PLAYER_NAME = "this potion";
 	
 	private static final String[] TRANSITIVE_VERBS = {
@@ -887,8 +889,6 @@ public class LovePotionItem extends Item {
 	            .build()));
 	}
 
-	
-
 	@Override
 	public @NotNull UseAnim getUseAnimation(@NotNull ItemStack itemstack) {
 		return UseAnim.DRINK;
@@ -896,10 +896,8 @@ public class LovePotionItem extends Item {
 
 	@Override
 	public int getUseDuration(@NotNull ItemStack itemstack, @NotNull LivingEntity livingEntity) {
-		return 40;
+		return USE_DURATION;
 	}
-
-
 
     @Override
 	public @NotNull ItemStack finishUsingItem(@NotNull ItemStack stack, Level level, @NotNull LivingEntity entity) {
@@ -920,7 +918,7 @@ public class LovePotionItem extends Item {
 	            }
 	        }
 
-            serverPlayer.getCooldowns().addCooldown(stack.getItem(), 260);
+            serverPlayer.getCooldowns().addCooldown(stack.getItem(), COOLDOWN);
 
 
             SoundEvent soundEvent = BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("repo_love_potion:bluh_bluh"));
