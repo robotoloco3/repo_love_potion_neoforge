@@ -115,14 +115,6 @@
       }
     ]
   },
-  "rick_roll": {
-    "sounds": [
-      {
-        "name": "repo_love_potion:villager_sings_never_gonna_give_you_up_-_minecraft_villager_cover",
-        "stream": true
-      }
-    ]
-  },
   "sunflower": {
     "sounds": [
       {
