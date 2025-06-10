@@ -1096,7 +1096,8 @@ public class LovePotionItem extends Item {
 		"{playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}!",
 		"{playerName} has a {adjective} {noun}.",
 	    "{playerName} makes me want to bust.",
-		"I love {arkCreature} more than {playerName}."
+		"I love {playerName} more than {arkCreature}."
+		
 	};
 
 	public LovePotionItem() {
