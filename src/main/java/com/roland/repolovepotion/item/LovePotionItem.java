@@ -1142,7 +1142,6 @@ public class LovePotionItem extends Item {
 
             serverPlayer.getCooldowns().addCooldown(stack.getItem(), COOLDOWN);
 
-
             SoundEvent soundEvent = BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("repo_love_potion:bluh_bluh"));
 			long seed = serverPlayer.getRandom().nextLong();
 			double radius = 24.0;
@@ -1159,8 +1158,8 @@ public class LovePotionItem extends Item {
                             soundHolder,
                             SoundSource.PLAYERS,
                             sourcePos.x,
-                               sourcePos.y,
-                            sourcePos.z,
+							sourcePos.y,
+							sourcePos.z,
                             1.0f,
                             1.0f,
                             seed
