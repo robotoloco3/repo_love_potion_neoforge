@@ -1103,7 +1103,6 @@ public class LovePotionItem extends Item {
 		"{playerName} could easily beat {arkCreature}.",
 		"I would smash {playerName}.",
 		"I would ride {playerName} like {arkCreature}."
-		
 	};
 
 	public LovePotionItem() {
