@@ -1001,7 +1001,7 @@ public class LovePotionItem extends Item {
 		"Vulture",
 		"Woolly Rhino",
 		"Wyvern",
-		"Xiphactinus"
+		"Xiphactinus",
 		"X-Spino",
 		"Yi Ling",
 		"Yutyrannus"
