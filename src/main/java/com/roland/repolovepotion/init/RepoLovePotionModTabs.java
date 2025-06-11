@@ -27,6 +27,7 @@ public class RepoLovePotionModTabs {
 			tabData.accept(RepoLovePotionModItems.HEART_JAR.get());
 			tabData.accept(RepoLovePotionModItems.UNPOLISHED_LOVE_CORE.get());
 			tabData.accept(RepoLovePotionModItems.LOVE_DUST.get());
+			tabData.accept(RepoLovePotionModItems.INCOMPLETE_UNPOLISHED_HEART_CORE.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
 			tabData.accept(RepoLovePotionModItems.VILLAGER_RAP_DISK.get());
 		}
