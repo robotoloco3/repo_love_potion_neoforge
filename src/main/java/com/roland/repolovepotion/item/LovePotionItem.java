@@ -1001,7 +1001,8 @@ public class LovePotionItem extends Item {
 		"Vulture",
 		"Woolly Rhino",
 		"Wyvern",
-		"Xiphactinus",
+		"Xiphactinus"
+		"X-Spino",
 		"Yi Ling",
 		"Yutyrannus"
 	};
@@ -1097,7 +1098,12 @@ public class LovePotionItem extends Item {
 		"{playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}! {playerName}!",
 		"{playerName} has a {adjective} {noun}.",
 	    "{playerName} makes me want to bust.",
-		"I love {playerName} more than {arkCreature}."
+		"I love {playerName} more than {arkCreature}.",
+		"{arkCreature} isnt that good compared to {playerName}!",
+		"{playerName} could easily beat {arkCreature}.",
+		"I would smash {playerName}.",
+		"I would ride {playerName} like {arkCreature}."
+		
 	};
 
 	public LovePotionItem() {
