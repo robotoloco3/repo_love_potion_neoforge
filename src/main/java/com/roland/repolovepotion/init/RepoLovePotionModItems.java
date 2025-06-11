@@ -18,5 +18,5 @@ public class RepoLovePotionModItems {
 	public static final DeferredItem<Item> VILLAGER_RAP_DISK = REGISTRY.register("villager_rap_disk", VillagerRapDiskItem::new);
 	public static final DeferredItem<Item> I_LOVE_DISK = REGISTRY.register("i_love_disk", ILoveDiskItem::new);
 	public static final DeferredItem<Item> LOVE_DUST = REGISTRY.register("love_dust", LoveDustItem::new);
-	public static final DeferredItem<Item> INCOMPLETE_UNPOLISHED_HEART_CORE = REGISTRY.register("incomplete_unpublished_heart_core", IncompleteUnpolishedLoveCoreItem::new);
+	public static final DeferredItem<Item> INCOMPLETE_UNPOLISHED_LOVE_CORE = REGISTRY.register("incomplete_unpolished_love_core", IncompleteUnpolishedLoveCoreItem::new);
 }
