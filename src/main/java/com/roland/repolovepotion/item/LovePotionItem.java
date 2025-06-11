@@ -1099,7 +1099,7 @@ public class LovePotionItem extends Item {
 		"{playerName} has a {adjective} {noun}.",
 	    "{playerName} makes me want to bust.",
 		"I love {playerName} more than {arkCreature}.",
-		"{arkCreature} isnt that good compared to {playerName}!",
+		"{arkCreature} isn't that good compared to {playerName}!",
 		"{playerName} could easily beat {arkCreature}.",
 		"I would smash {playerName}.",
 		"I would ride {playerName} like {arkCreature}."
