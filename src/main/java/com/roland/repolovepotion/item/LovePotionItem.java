@@ -173,16 +173,16 @@ public class LovePotionItem extends Item {
 		"explore with",
 		"go to Japan with",
 		"grow old with",
-		"Play Ark with",
-		"Love with",
-		"Goon for",
-		"Cuddle",
-		"Snuggle",
-		"Goon to",
-		"Tickle my pickle with",
-		"Tickle my pickle for",
-		"Throw it back to",
-		"Collaborate with",
+		"play Ark with",
+		"love with",
+		"goon for",
+		"cuddle",
+		"snuggle",
+		"goon to",
+		"tickle my pickle with",
+		"tickle my pickle for",
+		"throw it back to",
+		"collaborate with",
 		"go awww lala for",
 		"ark survival evolved",
 		"go 'awwawawawawawawaaaaaa they so sweeetttt' to",
@@ -331,11 +331,11 @@ public class LovePotionItem extends Item {
 		"melt",
 		"smirk",
 		"chuckle",
-		"Smash",
-		"Bust",
-		"Water bucket release",
+		"smash",
+		"bust",
+		"water bucket release",
 		"ark survival evolved",
-		"Flint n steel"
+		"flint n steel"
 
 	};
 	
@@ -421,7 +421,7 @@ public class LovePotionItem extends Item {
 		"Boogy woogy",
 		"boogy woogity",
 		"going crazyyyyyyyyyyyyyyyyyyyy",
-		"Creaming",
+		"creaming",
 		"ark survival evolved",
 		"going YAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYA",
 		"YAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYA"
@@ -565,9 +565,9 @@ public class LovePotionItem extends Item {
 		"wooooow",
 		"oh woooow",
 		"oh my gawd",
-		"Yiiipiiii yipiiiiii yiipiiiiiiii",
-		"Bustable",
-		"Sooooo smash",
+		"yiiipiiii yipiiiiii yiipiiiiiiii",
+		"bustable",
+		"sooooo smash",
 		"smashable",
 		"cozyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
 		"yummy",
@@ -656,7 +656,7 @@ public class LovePotionItem extends Item {
 		"sincerely",
 		"downbad",
 		"ark survival evolved",
-		"Boogy woogy",
+		"boogy woogy",
 		"yummyyyyyyyyyyy"
 
 	};
@@ -770,19 +770,19 @@ public class LovePotionItem extends Item {
 		"princess",
 		"prince",
 		"superstar",
-		"Massive smashable gyattt",
-		"Ark survival evolved",
+		"massive smashable gyattt",
+		"ark survival evolved",
 		"Drake",
 		"child",
 		"ARK",
-		"Smash",
-		"Lov",
-		"Huggable lov",
-		"Bald person",
+		"smash",
+		"lov",
+		"huggable lov",
+		"bald person",
 		"Gru",
-		"Giraffe",
+		"giraffe",
 		"MY LOVE",
-		"Nerd"
+		"nerd"
 	};
 
 	private static final String[] ARK_CREATURE = {
