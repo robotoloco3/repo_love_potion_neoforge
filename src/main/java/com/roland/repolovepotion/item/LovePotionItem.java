@@ -184,7 +184,7 @@ public class LovePotionItem extends Item {
 		"throw it back to",
 		"collaborate with",
 		"go awww lala for",
-		"Ark survival evolved",
+		"Ark Survival Evolved",
 		"go 'awwawawawawawawaaaaaa they so sweeetttt' to",
 		"do 7:30 with"
 	};
@@ -334,7 +334,7 @@ public class LovePotionItem extends Item {
 		"smash",
 		"bust",
 		"water bucket release",
-		"Ark survival evolved",
+		"Ark Survival Evolved",
 		"flint n steel"
 
 	};
@@ -422,7 +422,7 @@ public class LovePotionItem extends Item {
 		"boogy woogity",
 		"going crazyyyyyyyyyyyyyyyyyyyy",
 		"creaming",
-		"Ark survival evolved",
+		"Ark Survival Evolved",
 		"going YAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYA",
 		"YAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYA"
 	};
@@ -572,7 +572,7 @@ public class LovePotionItem extends Item {
 		"cozyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
 		"yummy",
 		"creamy",
-		"Ark survival evolved",
+		"Ark Survival Evolved",
 		"wobble dogs"
 	};
 	
@@ -655,7 +655,7 @@ public class LovePotionItem extends Item {
 		"truly",
 		"sincerely",
 		"downbad",
-		"Ark survival evolved",
+		"Ark Survival Evolved",
 		"boogy woogy",
 		"yummyyyyyyyyyyy"
 
@@ -771,7 +771,7 @@ public class LovePotionItem extends Item {
 		"prince",
 		"superstar",
 		"massive smashable gyattt",
-		"Ark survival evolved",
+		"Ark Survival Evolved",
 		"Drake",
 		"child",
 		"ARK",
@@ -866,10 +866,6 @@ public class LovePotionItem extends Item {
 		"Ferox",
 		"Bison",
 		"Megaraptor",
-		"Minotaur",
-		"Natrix",
-		"Thanatos",
-		"Thodes",
 		"Fjordhawk",
 		"Forest Titan",
 		"Gacha",
@@ -975,7 +971,6 @@ public class LovePotionItem extends Item {
 		"Shastasaurus",
 		"Shinehorn",
 		"Sinomacrops",
-		"Sir-5rM8",
 		"Snow Owl",
 		"Spino",
 		"Stegosaurus",
@@ -1003,7 +998,6 @@ public class LovePotionItem extends Item {
 		"Wyvern",
 		"Xiphactinus",
 		"X-Spino",
-		"Yi Ling",
 		"Yutyrannus"
 	};
 	
