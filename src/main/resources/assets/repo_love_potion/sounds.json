@@ -36,6 +36,7 @@
     ]
   },
   "demons": {
+    "subtitle": "subtitles.demons",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_demons_-_minecraft_villager_cover.",
@@ -44,6 +45,7 @@
     ]
   },
   "diamonds": {
+    "subtitle": "subtitles.diamonds",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_diamonds_-_minecraft_villager_cover",
@@ -52,6 +54,7 @@
     ]
   },
   "double_life": {
+    "subtitle": "subtitles.double_life",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_double_life_-_minecraft_villager_cover",
@@ -60,6 +63,7 @@
     ]
   },
   "rule_world": {
+    "subtitle": "subtitles.rule_world",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_everybody_wants_to_rule_the_world_-_minecraft_villager_cover.",
@@ -68,6 +72,7 @@
     ]
   },
   "flowers": {
+    "subtitle": "subtitles.flowers",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_flowers_-_minecraft_villager_cover.",
@@ -76,6 +81,7 @@
     ]
   },
   "gangsta": {
+    "subtitle": "subtitles.gangsta",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_gangsta_paradise_-_minecraft_villager_cover.",
@@ -84,6 +90,7 @@
     ]
   },
   "hymn": {
+    "subtitle": "subtitles.hymn",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_hymn_for_the_weekend_-_minecraft_villager_cover.",
@@ -92,6 +99,7 @@
     ]
   },
   "worried": {
+    "subtitle": "subtitles.worried",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_i_aint_worried_-_minecraft_villager_cover.",
@@ -100,6 +108,7 @@
     ]
   },
   "levitating": {
+    "subtitle": "subtitles.levitating",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_levitating_-_minecraft_villager_cover.",
@@ -108,6 +117,7 @@
     ]
   },
   "jagger": {
+    "subtitle": "subtitles.jagger",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_moves_like_jagger_-_minecraft_villager_cover.",
@@ -116,6 +126,7 @@
     ]
   },
   "sunflower": {
+    "subtitle": "subtitles.sunflower",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_sunflower_-_minecraft_villager_cover",
@@ -124,6 +135,7 @@
     ]
   },
   "thunder": {
+    "subtitle": "subtitles.thunder",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_thunder_-_minecraft_villager_cover.",
@@ -132,6 +144,7 @@
     ]
   },
   "uptown": {
+    "subtitle": "subtitles.uptown",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_uptown_funk_-_minecraft_villager_cover.",
@@ -140,9 +153,19 @@
     ]
   },
   "viva": {
+    "subtitle": "subtitles.viva",
     "sounds": [
       {
         "name": "repo_love_potion:villager_sings_viva_la_vida_-_minecraft_villager_cover.",
+        "stream": true
+      }
+    ]
+  },
+  "ark_song": {
+    "subtitle": "subtitles.ark_song",
+    "sounds": [
+      {
+        "name": "repo_love_potion:ark_main_theme",
         "stream": true
       }
     ]
