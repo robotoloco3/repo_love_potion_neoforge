@@ -41,4 +41,5 @@ public class RepoLovePotionModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> YMCA = REGISTRY.register("ymca", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("repo_love_potion", "ymca")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> HOLY_MOLY = REGISTRY.register("holy_moly", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("repo_love_potion", "holy_moly")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> YIPEE = REGISTRY.register("yipee", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("repo_love_potion", "yipee")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ARK_SONG = REGISTRY.register("ark_song", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("repo_love_potion", "ark_song")));
 }

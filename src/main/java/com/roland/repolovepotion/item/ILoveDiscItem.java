@@ -9,8 +9,8 @@ import net.minecraft.core.registries.Registries;
 
 import com.roland.repolovepotion.RepoLovePotionMod;
 
-public class ILoveDiskItem extends Item {
-	public ILoveDiskItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "i_love_disk"))));
+public class ILoveDiscItem extends Item {
+	public ILoveDiscItem() {
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "i_love_disc"))));
 	}
 }
