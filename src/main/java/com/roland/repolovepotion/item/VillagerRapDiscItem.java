@@ -11,6 +11,6 @@ import com.roland.repolovepotion.RepoLovePotionMod;
 
 public class VillagerRapDiscItem extends Item {
 	public VillagerRapDiscItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "villager_rap_disc"))));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "villager_rap_disc"))));
 	}
 }

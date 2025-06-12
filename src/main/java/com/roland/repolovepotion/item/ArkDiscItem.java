@@ -10,6 +10,6 @@ import net.minecraft.world.item.Rarity;
 
 public class ArkDiscItem extends Item {
 	public ArkDiscItem() {
-		super(new Properties().stacksTo(1).rarity(Rarity.COMMON).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "ark_disc"))));
+		super(new Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "ark_disc"))));
 	}
 }

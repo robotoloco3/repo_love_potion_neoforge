@@ -11,6 +11,6 @@ import com.roland.repolovepotion.RepoLovePotionMod;
 
 public class ILoveDiscItem extends Item {
 	public ILoveDiscItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "i_love_disc"))));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "i_love_disc"))));
 	}
 }
