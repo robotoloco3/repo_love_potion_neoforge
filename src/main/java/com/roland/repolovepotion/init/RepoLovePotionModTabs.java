@@ -30,6 +30,7 @@ public class RepoLovePotionModTabs {
 			tabData.accept(RepoLovePotionModItems.INCOMPLETE_UNPOLISHED_LOVE_CORE.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
 			tabData.accept(RepoLovePotionModItems.VILLAGER_RAP_DISK.get());
+			tabData.accept(RepoLovePotionModItems.ARK_DISK.get());
 		}
 	}
 }
