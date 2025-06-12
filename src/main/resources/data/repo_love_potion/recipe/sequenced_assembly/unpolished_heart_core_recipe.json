@@ -48,7 +48,7 @@
           "item": "repo_love_potion:incomplete_unpolished_love_core"
         },
         {
-          "item": "create:cogwheel"
+          "item": "create:andesite_alloy"
         }
       ],
       "results": [
@@ -64,7 +64,7 @@
           "item": "repo_love_potion:incomplete_unpolished_love_core"
         },
         {
-          "item": "create:large_cogwheel"
+          "item": "repo_love_potion:love_dust"
         }
       ],
       "results": [
@@ -77,10 +77,10 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "create:incomplete_precision_mechanism"
+          "item": "repo_love_potion:incomplete_unpolished_love_core"
         },
         {
-          "tag": "c:nuggets/iron"
+          "item": "minecraft:gold_block"
         }
       ],
       "results": [
@@ -93,7 +93,7 @@
       "type": "create:filling",
       "ingredients": [
         {
-          "item": "create:unprocessed_obsidian_sheet"
+          "item": "repo_love_potion:incomplete_unpolished_love_core"
         },
         {
           "type": "fluid_stack",
