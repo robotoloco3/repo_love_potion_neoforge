@@ -2,12 +2,12 @@
   "type": "create:compacting",
   "ingredients": [
     {
-      "item": "minecraft:glass",
-      "count": 12
+      "count": 12,
+      "item": "minecraft:glass"
     },
     {
-      "item": "minecraft:iron_bars",
-      "count": 2
+      "count": 2,
+      "item": "minecraft:iron_bars"
     },
     {
       "item": "minecraft:oak_button"
