@@ -1,13 +1,13 @@
 {
   "type": "create:sequenced_assembly",
   "ingredient": {
-    "id": "repo_love_potion:love_dust"
+    "item": "repo_love_potion:love_dust"
   },
   "loops": 10,
   "results": [
     {
       "chance": 120.0,
-      "id": "repo_love_potion:unpolished_heart_core"
+      "id": "repo_love_potion:unpolished_love_core"
     },
     {
       "chance": 8.0,
