@@ -1,0 +1,36 @@
+{
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:glass"
+    },
+    "B": {
+      "item": "minecraft:iron_block"
+    },
+    "C": {
+      "item": "create:super_glue"
+    },
+    "D": {
+      "item": "minecraft:iron_bars"
+    },
+    "E": {
+      "item": "repo_love_potion:love_dust"
+    },
+    "F": {
+      "item": "minecraft:oak_button"
+    }
+  },
+  "pattern": [
+    "  F  ",
+    "AA AA",
+    "AECEA",
+    " AEA ",
+    " DBD "
+  ],
+  "result": {
+    "id": "repo_love_potion:heart_jar"
+  },
+  "show_notification": false
+}
