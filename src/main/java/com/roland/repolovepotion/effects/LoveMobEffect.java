@@ -43,10 +43,6 @@ public class LoveMobEffect extends ExtendedMobEffect {
             3, AttributeModifier.Operation.ADD_VALUE);
     }
 
-    @Override
-    public @NotNull ParticleOptions createParticleOptions(@NotNull MobEffectInstance effectInstance) {
-        return ParticleTypes.HEART;
-    }
 
     @Override
     public void fillEffectCures(Set<EffectCure> cures, @NotNull MobEffectInstance effectInstance) {
@@ -150,7 +146,7 @@ public class LoveMobEffect extends ExtendedMobEffect {
 
     @Override
     public EffectOverlayRenderer getOverlayRenderer() {
-      return new LoveOverlayRenderer();
+      return null;
     }
 
 }
