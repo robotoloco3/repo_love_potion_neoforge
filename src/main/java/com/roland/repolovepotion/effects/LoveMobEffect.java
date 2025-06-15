@@ -1,6 +1,7 @@
 package com.roland.repolovepotion.effects;
 
 
+import com.roland.repolovepotion.init.RepoLovePotionModParticleTypes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -56,14 +57,14 @@ public class LoveMobEffect extends ExtendedMobEffect {
 
     @Override
     public boolean shouldTickEffect(@Nullable MobEffectInstance effectInstance, @Nullable LivingEntity entity, int ticksRemaining, int amplifier) {
-        return ticksRemaining % 40 == 0;
+        return true;
     }
     @Override
     public boolean tick(LivingEntity entity, @Nullable MobEffectInstance effectInstance, int amplifier) {
 
         Level level = entity.level();
 
-        if (!level.isClientSide && level.random.nextFloat() < 0.1f) {
+        if (!level.isClientSide && level.random.nextFloat() < 0.01f) {
             level.playSound(
                 null,
                 entity.blockPosition(),
@@ -72,6 +73,12 @@ public class LoveMobEffect extends ExtendedMobEffect {
                 1.0F,
                 1.0F + level.random.nextFloat() * 0.4F
             );
+        }
+
+        if (!level.isClientSide && level.random.nextFloat() < 0.1F) {
+            ((ServerLevel)level).sendParticles(RepoLovePotionModParticleTypes.LOVE_PARTICLE.get(),
+                    entity.getX(), entity.getY() + 1.0D, entity.getZ(),
+                    1, 0.1D, 0.1D, 0.1D, 0.01D);
         }
 
         return true;
