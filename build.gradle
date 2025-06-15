@@ -109,9 +109,9 @@ idea {
 
 
 repositories {
-    maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
-    maven { url = "https://mvn.devos.one/snapshots" } // Registrate
-    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
+    maven { url = "https://maven.createmod.net" }
+    maven { url = "https://mvn.devos.one/snapshots" }
+    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" }
     maven { url = 'https://cursemaven.com/' }
 }
 
@@ -127,6 +127,7 @@ dependencies {
     implementation 'curse.maven:tslateffectslib-700382:5882017'
     implementation "curse.maven:jei-238222:6614392"
     implementation "curse.maven:lmft-656346:5425796"
+    implementation "curse.maven:hammer-lib-247401:5739162"
 }
 
 dependencies {

@@ -32,27 +32,16 @@ public class LoveParticle extends TextureSheetParticle {
 	}
 
     private float angularVelocity;
-	private final float angularAcceleration;
+	private final SpriteSet spriteSet;
 
-	protected LoveParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
-		super(world, x, y, z);
-        this.setSize(0.15f, 0.15f);
-		this.quadSize *= 0.5f;
-		this.lifetime = 7;
-		this.gravity = -0.1f;
-		this.hasPhysics = true;
-		this.xd = vx * 0.3;
-		this.yd = vy * 0.3;
-		this.zd = vz * 0.3;
-		this.angularVelocity = 0.03f;
-		this.angularAcceleration = 0.03f;
-		this.pickSprite(spriteSet);
-	}
+	protected LoveParticle(ClientLevel world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteSet textures) {
+			super(world, x, y, z, velocityX, velocityY, velocityZ);
+			this.spriteSet = textures;
+			this.quadSize *= 1.5F;
+			this.lifetime = 16;
+			this.setSpriteFromAge(textures);
+		}
 
-	@Override
-	public int getLightColor(float partialTick) {
-		return 15728880;
-	}
 
 	@Override
 	public @NotNull ParticleRenderType getRenderType() {
@@ -62,8 +51,6 @@ public class LoveParticle extends TextureSheetParticle {
 	@Override
 	public void tick() {
 		super.tick();
-		this.oRoll = this.roll;
-		this.roll += this.angularVelocity;
-		this.angularVelocity += this.angularAcceleration;
+		this.setSpriteFromAge(this.spriteSet);
 	}
 }

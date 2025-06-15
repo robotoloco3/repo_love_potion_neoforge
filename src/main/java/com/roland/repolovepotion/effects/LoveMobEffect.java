@@ -3,6 +3,7 @@ package com.roland.repolovepotion.effects;
 
 import com.roland.repolovepotion.init.RepoLovePotionModParticleTypes;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffects;
@@ -41,6 +42,10 @@ public class LoveMobEffect extends ExtendedMobEffect {
             3, AttributeModifier.Operation.ADD_VALUE);
     }
 
+    @Override
+    public @NotNull ParticleOptions createParticleOptions(@NotNull MobEffectInstance mobEffectInstance) {
+        return RepoLovePotionModParticleTypes.LOVE_PARTICLE.get();
+    }
 
     @Override
     public void fillEffectCures(Set<EffectCure> cures, @NotNull MobEffectInstance effectInstance) {
