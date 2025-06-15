@@ -28,8 +28,17 @@ public class LoveCoreItem extends Item {
 	@Override
 	public @NotNull ItemStack finishUsingItem(@NotNull ItemStack itemstack, @NotNull Level world, @NotNull LivingEntity entity) {
 		ItemStack retrieval = super.finishUsingItem(itemstack, world, entity);
-		if (!entity.level().isClientSide())
-			entity.addEffect(new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, 3600, 0, false, true, true));
+		final int EFFECT_DURATION = 6900;
+		if (!entity.level().isClientSide()) {
+
+            MobEffectInstance loveEffect = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, EFFECT_DURATION, 0, false, true, true);
+
+			MobEffectInstance currentSelf = entity.getEffect(RepoLovePotionModMobEffects.LOVE);
+			if (currentSelf == null || currentSelf.getDuration() <= EFFECT_DURATION) {
+				entity.removeEffect(RepoLovePotionModMobEffects.LOVE);
+				entity.addEffect(loveEffect);
+			}
+		}
 		return retrieval;
 	}
 }

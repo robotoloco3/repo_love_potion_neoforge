@@ -13,20 +13,13 @@ import net.minecraft.world.scores.Team;
 import net.neoforged.neoforge.common.EffectCures;
 import net.neoforged.neoforge.common.EffectCure;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.resources.ResourceLocation;
-
 import java.util.Set;
-
-import com.roland.repolovepotion.RepoLovePotionMod;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import com.roland.repolovepotion.init.RepoLovePotionModSounds;
-import net.tslat.effectslib.api.EffectOverlayRenderer;
 import net.tslat.effectslib.api.ExtendedMobEffect;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -34,12 +27,6 @@ import org.jetbrains.annotations.Nullable;
 public class LoveMobEffect extends ExtendedMobEffect {
     public LoveMobEffect() {
         super(MobEffectCategory.BENEFICIAL, 0xffff0099);
-        this.addAttributeModifier(Attributes.JUMP_STRENGTH,
-            ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "effect.love_0"),
-            0.2, AttributeModifier.Operation.ADD_VALUE);
-        this.addAttributeModifier(Attributes.STEP_HEIGHT,
-            ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "effect.love_2"),
-            3, AttributeModifier.Operation.ADD_VALUE);
     }
 
     @Override
@@ -49,8 +36,6 @@ public class LoveMobEffect extends ExtendedMobEffect {
 
     @Override
     public void fillEffectCures(Set<EffectCure> cures, @NotNull MobEffectInstance effectInstance) {
-        cures.add(EffectCures.MILK);
-        cures.add(EffectCures.PROTECTED_BY_TOTEM);
         cures.add(EffectCures.HONEY);
     }
 
@@ -79,7 +64,6 @@ public class LoveMobEffect extends ExtendedMobEffect {
                     entity.getX(), entity.getY() + 1.0D, entity.getZ(),
                     3, 0.1D, 0.1D, 0.1D, 0.01D);
         }
-
         return true;
     }
 
@@ -146,10 +130,4 @@ public class LoveMobEffect extends ExtendedMobEffect {
 
         return true;
     }
-
-    @Override
-    public EffectOverlayRenderer getOverlayRenderer() {
-      return null;
-    }
-
 }

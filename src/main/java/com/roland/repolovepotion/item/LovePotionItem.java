@@ -1167,13 +1167,22 @@ public class LovePotionItem extends Item {
                 }
 			}
 
+			int thresholdTicks = EFFECT_DURATION;
+
 			MobEffectInstance loveEffect = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, EFFECT_DURATION, 0, false, true, true);
 
-			serverPlayer.removeEffect(RepoLovePotionModMobEffects.LOVE);
-			serverPlayer.addEffect(loveEffect);
+			MobEffectInstance currentSelf = serverPlayer.getEffect(RepoLovePotionModMobEffects.LOVE);
+			if (currentSelf == null || currentSelf.getDuration() <= thresholdTicks) {
+				serverPlayer.removeEffect(RepoLovePotionModMobEffects.LOVE);
+				serverPlayer.addEffect(loveEffect);
+			}
+
 			if (nearest != null) {
-				nearest.removeEffect(RepoLovePotionModMobEffects.LOVE);
-				nearest.addEffect(loveEffect);
+				MobEffectInstance currentNearest = nearest.getEffect(RepoLovePotionModMobEffects.LOVE);
+				if (currentNearest == null || currentNearest.getDuration() <= thresholdTicks) {
+					nearest.removeEffect(RepoLovePotionModMobEffects.LOVE);
+					nearest.addEffect(loveEffect);
+				}
 			}
 
             String transitiveVerb = TRANSITIVE_VERBS[RANDOM.nextInt(TRANSITIVE_VERBS.length)];
