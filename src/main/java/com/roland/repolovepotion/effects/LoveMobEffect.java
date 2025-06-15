@@ -55,7 +55,7 @@ public class LoveMobEffect extends ExtendedMobEffect {
                 RepoLovePotionModSounds.YIPEE.get(),
                 SoundSource.PLAYERS,
                 1.0F,
-                1.0F + level.random.nextFloat() * 0.4F
+                1.0F + level.random.nextFloat() * 0.6F
             );
         }
 

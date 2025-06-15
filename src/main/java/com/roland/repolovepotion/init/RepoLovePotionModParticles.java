@@ -11,5 +11,6 @@ public class RepoLovePotionModParticles {
 	@SubscribeEvent
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
 		event.registerSpriteSet(RepoLovePotionModParticleTypes.LOVE_PARTICLE.get(), LoveParticle::provider);
+		event.registerSpriteSet(RepoLovePotionModParticleTypes.BLANK_PARTICLE.get(), LoveParticle::provider);
 	}
 }
