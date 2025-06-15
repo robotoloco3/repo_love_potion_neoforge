@@ -31,7 +31,7 @@ public class LoveMobEffect extends ExtendedMobEffect {
 
     @Override
     public @NotNull ParticleOptions createParticleOptions(@NotNull MobEffectInstance mobEffectInstance) {
-        return RepoLovePotionModParticleTypes.LOVE_PARTICLE.get();
+        return RepoLovePotionModParticleTypes.BLANK_PARTICLE.get();
     }
 
     @Override
