@@ -36,10 +36,10 @@ public class LoveParticle extends TextureSheetParticle {
 
 	protected LoveParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
-        this.setSize(0.2f, 0.2f);
+        this.setSize(0.15f, 0.15f);
 		this.quadSize *= 0.5f;
 		this.lifetime = 7;
-		this.gravity = 0.4f;
+		this.gravity = -0.1f;
 		this.hasPhysics = true;
 		this.xd = vx * 0.3;
 		this.yd = vy * 0.3;

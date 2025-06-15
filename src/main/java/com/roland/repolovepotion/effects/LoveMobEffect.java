@@ -74,7 +74,7 @@ public class LoveMobEffect extends ExtendedMobEffect {
         if (!level.isClientSide && level.random.nextFloat() < 0.1F) {
             ((ServerLevel)level).sendParticles(RepoLovePotionModParticleTypes.LOVE_PARTICLE.get(),
                     entity.getX(), entity.getY() + 1.0D, entity.getZ(),
-                    1, 0.1D, 0.1D, 0.1D, 0.01D);
+                    3, 0.1D, 0.1D, 0.1D, 0.01D);
         }
 
         return true;
