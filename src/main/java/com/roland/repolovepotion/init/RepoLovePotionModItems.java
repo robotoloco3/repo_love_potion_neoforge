@@ -2,7 +2,6 @@
 package com.roland.repolovepotion.init;
 
 import com.roland.repolovepotion.item.*;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 

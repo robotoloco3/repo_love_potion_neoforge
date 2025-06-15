@@ -30,8 +30,6 @@ public class LoveParticle extends TextureSheetParticle {
 			return new LoveParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
 		}
 	}
-
-    private float angularVelocity;
 	private final SpriteSet spriteSet;
 
 	protected LoveParticle(ClientLevel world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteSet textures) {
