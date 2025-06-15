@@ -26,8 +26,7 @@ import com.roland.repolovepotion.RepoLovePotionMod;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import com.roland.repolovepotion.init.RepoLovePotionModSounds;
-
-//import net.tslat.effectslib.api.EffectOverlayRenderer;
+import net.tslat.effectslib.api.EffectOverlayRenderer;
 import net.tslat.effectslib.api.ExtendedMobEffect;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -141,9 +140,10 @@ public class LoveMobEffect extends ExtendedMobEffect {
 
         return true;
     }
-    //@Override
-    //public EffectOverlayRenderer getOverlayRenderer() {
-    //  return new LoveEffectOverlayRenderer();
-    //}
+
+    @Override
+    public EffectOverlayRenderer getOverlayRenderer() {
+      return new LoveOverlayRenderer();
+    }
 
 }
