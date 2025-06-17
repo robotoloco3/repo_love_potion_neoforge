@@ -30,7 +30,7 @@ public class BlankParticle extends TextureSheetParticle {
 	protected BlankParticle(ClientLevel world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteSet textures) {
 			super(world, x, y, z, velocityX, velocityY, velocityZ);
 			this.spriteSet = textures;
-			this.quadSize *= 0F;
+			this.quadSize *= 1F;
 			this.lifetime = 16;
 			this.setSpriteFromAge(textures);
 		}

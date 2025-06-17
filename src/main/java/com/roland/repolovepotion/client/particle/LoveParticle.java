@@ -36,7 +36,7 @@ public class LoveParticle extends TextureSheetParticle {
 			super(world, x, y, z, velocityX, velocityY, velocityZ);
 			this.spriteSet = textures;
 			this.quadSize *= 1.5F;
-			this.lifetime = 16;
+			this.lifetime = 128;
 			this.setSpriteFromAge(textures);
 		}
 
