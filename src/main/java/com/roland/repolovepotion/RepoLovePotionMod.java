@@ -1,8 +1,8 @@
 package com.roland.repolovepotion;
 
 import com.roland.repolovepotion.events.PlayerDeathHandler;
+import com.roland.repolovepotion.events.PlayerLoveEffectHandler;
 import com.roland.repolovepotion.init.*;
-import net.neoforged.api.distmarker.Dist;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -51,6 +51,7 @@ public class RepoLovePotionMod {
 
 		NeoForge.EVENT_BUS.register(PlayerDeathHandler.class);
 
+		NeoForge.EVENT_BUS.register(new PlayerLoveEffectHandler());
 
 	}
 
