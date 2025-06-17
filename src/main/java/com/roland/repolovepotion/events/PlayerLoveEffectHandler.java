@@ -13,10 +13,9 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.WeakHashMap;
 
-
 public class PlayerLoveEffectHandler {
 
-    private static final long BREED_COOLDOWN_TICKS = 40L;
+    private static final long BREED_COOLDOWN_TICKS = 60L;
     private final Map<UUID, Long> lastBreedTime = new WeakHashMap<>();
 
     @SubscribeEvent
@@ -28,7 +27,7 @@ public class PlayerLoveEffectHandler {
         if (!player.hasEffect(RepoLovePotionModMobEffects.LOVE)) return;
 
         long gameTime = level.getGameTime();
-        double radius = 8.0D;
+        double radius = 10.0D;
 
         List<Animal> animals = level.getEntitiesOfClass(Animal.class, player.getBoundingBox().inflate(radius));
 

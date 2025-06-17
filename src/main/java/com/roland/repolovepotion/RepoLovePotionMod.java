@@ -1,5 +1,6 @@
 package com.roland.repolovepotion;
 
+import com.roland.repolovepotion.events.LoveCropGrowthHandler;
 import com.roland.repolovepotion.events.PlayerDeathHandler;
 import com.roland.repolovepotion.events.PlayerLoveEffectHandler;
 import com.roland.repolovepotion.init.*;
@@ -52,6 +53,8 @@ public class RepoLovePotionMod {
 		NeoForge.EVENT_BUS.register(PlayerDeathHandler.class);
 
 		NeoForge.EVENT_BUS.register(new PlayerLoveEffectHandler());
+
+		NeoForge.EVENT_BUS.register(LoveCropGrowthHandler.class);
 
 	}
 
