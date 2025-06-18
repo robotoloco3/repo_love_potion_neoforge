@@ -93,6 +93,15 @@ public class LoveMobEffect extends ExtendedMobEffect {
             ServerLevel level = player.serverLevel();
             Scoreboard scoreboard = level.getScoreboard();
 
+            level.playSound(
+                    null,
+                    entity.blockPosition(),
+                    RepoLovePotionModSounds.HOLY_MOLY.get(),
+                    SoundSource.PLAYERS,
+                    1.0F,
+                    1.0F + level.random.nextFloat() * 0.6F - 0.3F
+            );
+
             PlayerTeam team = scoreboard.getPlayerTeam("love_effect");
             if (team != null) {
                 scoreboard.removePlayerFromTeam(player.getScoreboardName(), team);
@@ -109,9 +118,19 @@ public class LoveMobEffect extends ExtendedMobEffect {
     }
     @Override
     public boolean onRemove(MobEffectInstance effectInstance, LivingEntity entity) {
+
         if (entity instanceof ServerPlayer player) {
             ServerLevel level = player.serverLevel();
             Scoreboard scoreboard = level.getScoreboard();
+
+            level.playSound(
+                    null,
+                    entity.blockPosition(),
+                    RepoLovePotionModSounds.HOLY_MOLY.get(),
+                    SoundSource.PLAYERS,
+                    1.0F,
+                    1.0F + level.random.nextFloat() * 0.6F - 0.3F
+            );
 
             PlayerTeam team = scoreboard.getPlayerTeam("love_effect");
             if (team != null) {
@@ -122,7 +141,6 @@ public class LoveMobEffect extends ExtendedMobEffect {
                 }
 
             }
-
             if (entity.hasEffect(MobEffects.GLOWING)) {
                 entity.removeEffect(MobEffects.GLOWING);
             }
