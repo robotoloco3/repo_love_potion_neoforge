@@ -3,10 +3,12 @@ package com.roland.repolovepotion.effects;
 
 import com.roland.repolovepotion.init.RepoLovePotionModParticleTypes;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.scores.Scoreboard;
 import net.minecraft.world.scores.Team;
@@ -93,6 +95,15 @@ public class LoveMobEffect extends ExtendedMobEffect {
             ServerLevel level = player.serverLevel();
             Scoreboard scoreboard = level.getScoreboard();
 
+            level.playSound(
+                    null,
+                    entity.blockPosition(),
+                    RepoLovePotionModSounds.HOLY_MOLY.get(),
+                    SoundSource.PLAYERS,
+                    1.0F,
+                    1.0F + level.random.nextFloat() * 0.6F - 0.3F
+            );
+
             PlayerTeam team = scoreboard.getPlayerTeam("love_effect");
             if (team != null) {
                 scoreboard.removePlayerFromTeam(player.getScoreboardName(), team);
@@ -109,9 +120,19 @@ public class LoveMobEffect extends ExtendedMobEffect {
     }
     @Override
     public boolean onRemove(MobEffectInstance effectInstance, LivingEntity entity) {
+
         if (entity instanceof ServerPlayer player) {
             ServerLevel level = player.serverLevel();
             Scoreboard scoreboard = level.getScoreboard();
+
+            level.playSound(
+                    null,
+                    entity.blockPosition(),
+                    RepoLovePotionModSounds.HOLY_MOLY.get(),
+                    SoundSource.PLAYERS,
+                    1.0F,
+                    1.0F + level.random.nextFloat() * 0.6F - 0.3F
+            );
 
             PlayerTeam team = scoreboard.getPlayerTeam("love_effect");
             if (team != null) {
@@ -122,7 +143,6 @@ public class LoveMobEffect extends ExtendedMobEffect {
                 }
 
             }
-
             if (entity.hasEffect(MobEffects.GLOWING)) {
                 entity.removeEffect(MobEffects.GLOWING);
             }
