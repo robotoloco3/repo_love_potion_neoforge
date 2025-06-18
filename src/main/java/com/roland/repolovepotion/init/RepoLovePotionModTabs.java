@@ -25,9 +25,10 @@ public class RepoLovePotionModTabs {
 			tabData.accept(RepoLovePotionModItems.ARK_DISC.get());
 			tabData.accept(RepoLovePotionModItems.DEMONS_DISC.get());
 			tabData.accept(RepoLovePotionModItems.DIAMONDS_DISC.get());
-			tabData.accept(RepoLovePotionModItems.DOUBLELIFE_DISC.get());
-			tabData.accept(RepoLovePotionModItems.RULEWORLD_DISC.get());
+			tabData.accept(RepoLovePotionModItems.DOUBLE_LIFE_DISC.get());
+			tabData.accept(RepoLovePotionModItems.RULE_WORLD_DISC.get());
 			tabData.accept(RepoLovePotionModItems.FLOWERS_DISC.get());
+			tabData.accept(RepoLovePotionModItems.LEVITATING_DISC.get());
 			tabData.accept(RepoLovePotionModItems.GANGSTA_DISC.get());
 			tabData.accept(RepoLovePotionModItems.HYMN_DISC.get());
 			tabData.accept(RepoLovePotionModItems.WORRIED_DISC.get());
