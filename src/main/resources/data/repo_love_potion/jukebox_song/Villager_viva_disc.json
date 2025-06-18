@@ -1,0 +1,8 @@
+{
+  "comparator_output": 1,
+  "description": {
+    "translate": "item.repo_love_potion.viva_disc.desc"
+  },
+  "length_in_seconds": 244,
+  "sound_event": "repo_love_potion:viva"
+}
