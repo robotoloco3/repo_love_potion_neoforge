@@ -14,9 +14,9 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 public class LoveCropGrowthHandler {
 
-    private static final int RADIUS = 12;
+    private static final int RADIUS = 18;
     private static final int GROWTH_ATTEMPTS = 1;
-    private static final double GROWTH_CHANCE = 0.02;
+    private static final double GROWTH_CHANCE = 0.015;
 
     @SubscribeEvent
     public static void onPlayerTick(PlayerTickEvent.Post event) {
@@ -48,6 +48,7 @@ public class LoveCropGrowthHandler {
                             }
                         }
                     }
-                });
+                }
+        );
     }
 }
