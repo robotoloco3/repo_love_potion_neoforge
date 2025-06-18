@@ -19,8 +19,8 @@ public class CreeperLoveAIHandler {
                 creeper,
                 Player.class,
                 12.0F,
-                1.0D,
-                1.2D,
+                1.4D,
+                1.8D,
                 player -> player.hasEffect(RepoLovePotionModMobEffects.LOVE)
         ));
     }
