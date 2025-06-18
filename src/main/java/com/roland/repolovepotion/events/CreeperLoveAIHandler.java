@@ -18,9 +18,9 @@ public class CreeperLoveAIHandler {
         creeper.goalSelector.addGoal(1, new AvoidEntityGoal<>(
                 creeper,
                 Player.class,
-                12.0F,
+                14.0F,
                 1.4D,
-                1.8D,
+                2.2D,
                 player -> player.hasEffect(RepoLovePotionModMobEffects.LOVE)
         ));
     }
