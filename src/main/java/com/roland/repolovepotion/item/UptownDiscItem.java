@@ -10,6 +10,6 @@ import net.minecraft.world.item.Rarity;
 
 public class UptownDiscItem extends Item {
 	public UptownDiscItem() {
-		super(new Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "uptown_disc"))));
+		super(new Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(RepoLovePotionMod.MODID, "uptown_funk_disc"))));
 	}
 }

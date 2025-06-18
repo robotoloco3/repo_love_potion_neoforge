@@ -21,8 +21,8 @@ public class RepoLovePotionModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(RepoLovePotionModItems.LOVE_POTION.get());
 			tabData.accept(RepoLovePotionModItems.I_LOVE_DISC.get());
-			tabData.accept(RepoLovePotionModItems.VILLAGER_RAP_DISC.get());
 			tabData.accept(RepoLovePotionModItems.ARK_DISC.get());
+			tabData.accept(RepoLovePotionModItems.VILLAGER_RAP_DISC.get());
 			tabData.accept(RepoLovePotionModItems.DEMONS_DISC.get());
 			tabData.accept(RepoLovePotionModItems.DIAMONDS_DISC.get());
 			tabData.accept(RepoLovePotionModItems.DOUBLE_LIFE_DISC.get());
