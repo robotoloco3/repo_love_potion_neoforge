@@ -1167,10 +1167,10 @@ public class LovePotionItem extends Item {
                 }
 			}
 
-			int thresholdTicks = EFFECT_DURATION;
+			int thresholdTicks = EFFECT_DURATION + 40;
 
 			MobEffectInstance loveEffect = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, EFFECT_DURATION, 0, false, true, true);
-			MobEffectInstance loveEffect2 = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, EFFECT_DURATION - 5, 0, false, true, true);
+			MobEffectInstance loveEffect2 = new MobEffectInstance(RepoLovePotionModMobEffects.LOVE, EFFECT_DURATION - 30, 0, false, true, true);
 
 			MobEffectInstance currentSelf = serverPlayer.getEffect(RepoLovePotionModMobEffects.LOVE);
 			if (currentSelf == null || currentSelf.getDuration() <= thresholdTicks) {
