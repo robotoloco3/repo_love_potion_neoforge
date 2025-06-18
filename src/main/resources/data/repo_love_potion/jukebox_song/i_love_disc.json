@@ -1,7 +1,7 @@
 {
   "comparator_output": 1,
   "description": {
-    "translate": "item.repo_love_potion.i_love_disk.desc"
+    "translate": "item.repo_love_potion.i_love_disc.desc"
   },
   "length_in_seconds": 82,
   "sound_event": "repo_love_potion:i_love_song"

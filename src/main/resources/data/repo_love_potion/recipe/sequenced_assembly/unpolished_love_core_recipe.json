@@ -1,13 +1,13 @@
 {
   "type": "create:sequenced_assembly",
   "ingredient": {
-    "id": "repo_love_potion:love_dust"
+    "item": "repo_love_potion:love_dust"
   },
-  "loops": 10,
+  "loops": 12,
   "results": [
     {
-      "chance": 120.0,
-      "id": "repo_love_potion:unpolished_heart_core"
+      "chance": 15.0,
+      "id": "repo_love_potion:unpolished_love_core"
     },
     {
       "chance": 8.0,
@@ -58,13 +58,15 @@
       ]
     },
     {
-      "type": "create:deploying",
+      "type": "create:filling",
       "ingredients": [
         {
           "item": "repo_love_potion:incomplete_unpolished_love_core"
         },
         {
-          "item": "repo_love_potion:love_dust"
+          "type": "fluid_stack",
+          "amount": 5000,
+          "fluid": "create:honey"
         }
       ],
       "results": [
@@ -80,7 +82,7 @@
           "item": "repo_love_potion:incomplete_unpolished_love_core"
         },
         {
-          "item": "minecraft:gold_block"
+          "item": "minecraft:ender_pearl"
         }
       ],
       "results": [
@@ -97,8 +99,56 @@
         },
         {
           "type": "fluid_stack",
-          "amount": 500,
+          "amount": 750,
           "fluid": "minecraft:lava"
+        }
+      ],
+      "results": [
+        {
+          "id": "repo_love_potion:incomplete_unpolished_love_core"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "repo_love_potion:incomplete_unpolished_love_core"
+        }
+      ],
+      "results": [
+        {
+          "id": "repo_love_potion:incomplete_unpolished_love_core"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "repo_love_potion:incomplete_unpolished_love_core"
+        },
+        {
+          "item": "minecraft:gunpowder"
+        }
+      ],
+      "results": [
+        {
+          "id": "repo_love_potion:incomplete_unpolished_love_core"
+        }
+      ]
+    },
+    {
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "repo_love_potion:incomplete_unpolished_love_core"
+        }
+      ],
+      "processing_time": 800,
+      "results": [
+        {
+          "id": "repo_love_potion:incomplete_unpolished_love_core"
         }
       ]
     }

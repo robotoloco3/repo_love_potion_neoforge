@@ -1,5 +1,6 @@
 {
   "type": "create:mixing",
+  "heat_requirement": "superheated",
   "ingredients": [
     {
       "item": "repo_love_potion:love_core"
@@ -12,6 +13,5 @@
     {
       "id": "repo_love_potion:love_potion"
     }
-  ],
-  "heatRequirement": "superheated"
+  ]
 }

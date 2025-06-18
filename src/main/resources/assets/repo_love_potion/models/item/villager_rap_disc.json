@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "repo_love_potion:item/i_love_disk"
+    "layer0": "repo_love_potion:item/villager_disc"
   }
 }

@@ -1,6 +1,10 @@
 package com.roland.repolovepotion;
 
+import com.roland.repolovepotion.events.CreeperLoveAIHandler;
+import com.roland.repolovepotion.events.LoveCropGrowthHandler;
 import com.roland.repolovepotion.events.PlayerDeathHandler;
+import com.roland.repolovepotion.events.PlayerLoveEffectHandler;
+import com.roland.repolovepotion.init.*;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -26,12 +30,6 @@ import java.util.HashMap;
 import java.util.Collection;
 import java.util.ArrayList;
 
-import com.roland.repolovepotion.init.RepoLovePotionModVillagerProfessions;
-import com.roland.repolovepotion.init.RepoLovePotionModTabs;
-import com.roland.repolovepotion.init.RepoLovePotionModSounds;
-import com.roland.repolovepotion.init.RepoLovePotionModMobEffects;
-import com.roland.repolovepotion.init.RepoLovePotionModItems;
-
 
 @Mod("repo_love_potion")
 public class RepoLovePotionMod {
@@ -51,8 +49,15 @@ public class RepoLovePotionMod {
 
 		RepoLovePotionModVillagerProfessions.PROFESSIONS.register(modEventBus);
 
+		RepoLovePotionModParticleTypes.REGISTRY.register(modEventBus);
+
 		NeoForge.EVENT_BUS.register(PlayerDeathHandler.class);
 
+		NeoForge.EVENT_BUS.register(new PlayerLoveEffectHandler());
+
+		NeoForge.EVENT_BUS.register(LoveCropGrowthHandler.class);
+
+		NeoForge.EVENT_BUS.register(CreeperLoveAIHandler.class);
 
 	}
 
