@@ -23,6 +23,19 @@ public class RepoLovePotionModTabs {
 			tabData.accept(RepoLovePotionModItems.I_LOVE_DISC.get());
 			tabData.accept(RepoLovePotionModItems.VILLAGER_RAP_DISC.get());
 			tabData.accept(RepoLovePotionModItems.ARK_DISC.get());
+			tabData.accept(RepoLovePotionModItems.DEMONS_DISC.get());
+			tabData.accept(RepoLovePotionModItems.DIAMONDS_DISC.get());
+			tabData.accept(RepoLovePotionModItems.DOUBLELIFE_DISC.get());
+			tabData.accept(RepoLovePotionModItems.RULEWORLD_DISC.get());
+			tabData.accept(RepoLovePotionModItems.FLOWERS_DISC.get());
+			tabData.accept(RepoLovePotionModItems.GANGSTA_DISC.get());
+			tabData.accept(RepoLovePotionModItems.HYMN_DISC.get());
+			tabData.accept(RepoLovePotionModItems.WORRIED_DISC.get());
+			tabData.accept(RepoLovePotionModItems.JAGGER_DISC.get());
+			tabData.accept(RepoLovePotionModItems.SUNFLOWER_DISC.get());
+			tabData.accept(RepoLovePotionModItems.THUNDER_DISC.get());
+			tabData.accept(RepoLovePotionModItems.UPTOWN_DISC.get());
+			tabData.accept(RepoLovePotionModItems.VIVA_DISC.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
 			tabData.accept(RepoLovePotionModItems.LOVE_CORE.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
