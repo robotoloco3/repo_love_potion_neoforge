@@ -4,5 +4,5 @@
   "translate": "item.repo_love_potion.hymn_disc.desc"
 },
   "length_in_seconds": 227,
-  "sound_event": "repo_love_potion:Hymn"
+  "sound_event": "repo_love_potion:hymn"
 }
