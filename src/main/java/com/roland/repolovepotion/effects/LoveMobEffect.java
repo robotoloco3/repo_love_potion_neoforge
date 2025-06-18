@@ -99,7 +99,7 @@ public class LoveMobEffect extends ExtendedMobEffect {
                     RepoLovePotionModSounds.HOLY_MOLY.get(),
                     SoundSource.PLAYERS,
                     1.0F,
-                    1.0F + level.random.nextFloat() * 0.6F - 0.3F
+                    1.0F + level.random.nextFloat() * 0.9F - 0.45F
             );
 
             PlayerTeam team = scoreboard.getPlayerTeam("love_effect");
@@ -129,7 +129,7 @@ public class LoveMobEffect extends ExtendedMobEffect {
                     RepoLovePotionModSounds.HOLY_MOLY.get(),
                     SoundSource.PLAYERS,
                     1.0F,
-                    1.0F + level.random.nextFloat() * 0.6F - 0.3F
+                    1.0F + level.random.nextFloat() * 0.9F - 0.45F
             );
 
             PlayerTeam team = scoreboard.getPlayerTeam("love_effect");
