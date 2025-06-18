@@ -27,7 +27,7 @@ public class PlayerLoveEffectHandler {
         if (!player.hasEffect(RepoLovePotionModMobEffects.LOVE)) return;
 
         long gameTime = level.getGameTime();
-        double radius = 10.0D;
+        double radius = 12.0D;
 
         List<Animal> animals = level.getEntitiesOfClass(Animal.class, player.getBoundingBox().inflate(radius));
 
