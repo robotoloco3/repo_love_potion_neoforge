@@ -56,8 +56,6 @@ public class RepoLovePotionMod {
 
 		NeoForge.EVENT_BUS.register(CreeperLoveAIHandler.class);
 
-		NeoForge.EVENT_BUS.register(NewTaxManHandler.class);
-
 	}
 
 
