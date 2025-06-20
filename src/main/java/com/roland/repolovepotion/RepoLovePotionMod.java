@@ -1,9 +1,6 @@
 package com.roland.repolovepotion;
 
-import com.roland.repolovepotion.events.CreeperLoveAIHandler;
-import com.roland.repolovepotion.events.LoveCropGrowthHandler;
-import com.roland.repolovepotion.events.PlayerDeathHandler;
-import com.roland.repolovepotion.events.PlayerLoveEffectHandler;
+import com.roland.repolovepotion.events.*;
 import com.roland.repolovepotion.init.*;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -58,6 +55,8 @@ public class RepoLovePotionMod {
 		NeoForge.EVENT_BUS.register(LoveCropGrowthHandler.class);
 
 		NeoForge.EVENT_BUS.register(CreeperLoveAIHandler.class);
+
+		NeoForge.EVENT_BUS.register(NewTaxManHandler.class);
 
 	}
 
