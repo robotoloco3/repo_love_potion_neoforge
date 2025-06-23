@@ -65,7 +65,7 @@
         },
         {
           "type": "fluid_stack",
-          "amount": 5000,
+          "amount": 750,
           "fluid": "create:honey"
         }
       ],
